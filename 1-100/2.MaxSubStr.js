@@ -18,6 +18,8 @@ var lengthOfLongestSubstring = function(s) {
     return ans
 };  
 
+
+
 const s = "abcabcbb"
 const result = lengthOfLongestSubstring()
 console.log(result)
