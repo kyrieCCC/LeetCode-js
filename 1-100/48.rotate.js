@@ -23,14 +23,15 @@ var rotate = function (matrix) {
     const n = matrix[0].length
     for (let i = 0; i < Math.floor(n / 2); i++){
         for (let j = 0; j < Math.floor((n + 1) / 2); j++){
-            const temp = matrix[i][j]
-            matrix[i][j] = matrix[n - j - 1][i] 
-            matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1]
-            matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1]
-            matrix[j][n - i - 1] = temp
+            const temp = matrix[i][j] //一个临时变量获取到ij的值
+            matrix[i][j] = matrix[n - j - 1][i] //开始转圈，把左下角放到左上角
+            matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1]//把右下角放到左下角
+            matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1]//把右上角放到右下角
+            matrix[j][n - i - 1] = temp //把左上角放到右上角
         }
     }
     return matrix
 };
+//这个解法要注意一个问题，就是i< n/2 这样做是因为我们每次只需要变动1/4部分的数值，左上角1/4，右上角1/4...
 const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 console.log(rotate(matrix))
