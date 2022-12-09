@@ -14,9 +14,27 @@ var canJump = function (nums) {
     }
     return endIndex === 0 //判断是否达到这个距离
 };
+//击败84.31%
 //这个解法很巧妙
 //从末尾开始算，末尾的index减去前一个的index得到的就是当前index到end的距离
 //如果我们的nums[i]没达到这个距离，就跳到下一位
 //如果整个数组都到不了这个距离，返回false
+
+var canJumpplus = function (nums) { 
+    let max = 0
+    for (let i = 0; i <= max; i++){
+        if (i + nums[i] > max) {
+            max = i + nums[i]
+        }
+        if (max >= nums.length - 1) {
+            return true
+        }
+    }
+    return false
+}
+//击败96.84%
+//上面我们可以用倒序法算出距离
+//同样我们正序也可以算出距离
+//两种解法都很好的理解，需要不断斟酌
 const nums = [2, 3, 1, 1, 4]
-console.log(canJump(nums))
+console.log(canJumpplus(nums))
