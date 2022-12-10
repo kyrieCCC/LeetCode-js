@@ -26,7 +26,7 @@ var longestPalindrome = function (s) {
   }
   return res;
 };
-
+//substring
 var longestPalindromepass = function(s) {
     let ans = ''
     for(i = 0; i < s.length; i++){
@@ -40,6 +40,7 @@ var longestPalindromepass = function(s) {
     }
     return ans
 };
+//substr 这个方法不常用
 //滑动窗口判断
 const s = "babcc";
 console.log("结果是", longestPalindrome(s));
