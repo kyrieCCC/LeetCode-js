@@ -40,6 +40,6 @@ var longestPalindromepass = function(s) {
     }
     return ans
 };
-
+//滑动窗口判断
 const s = "babcc";
 console.log("结果是", longestPalindrome(s));
