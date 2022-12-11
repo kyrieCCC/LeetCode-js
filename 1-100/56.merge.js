@@ -6,13 +6,13 @@
 // 解释：区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
 var mergeNo = function (intervals) {
     const res = []
-    let endIndex = 1,startIndex = 0
+    intervals.sort((a, b) => a[0] - b[0])
     for (let i = 0; i < intervals.length; i++){
         if (i === intervals.length) {
             res.push(intervals[i + 1])
         }
-        else if (intervals[i][endIndex] >= intervals[i + 1][startIndex]) {
-            res.push([intervals[i][startIndex], intervals[i + 1][endIndex]])
+        else if (intervals[i][1] >= intervals[i + 1][0]) {
+            res.push([intervals[i][0], intervals[i + 1][1]])
             i++
         }
         else {
@@ -44,6 +44,6 @@ var merge = function (intervals) {
 //这个做法是滑动来判断前一个数组的第二个数与后一个数组的第一个数
 //pre来进行比较
 const intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
-const test = [[1, 4], [0, 4]]
-console.log(test.sort())
-console.log(merge(intervals))
+// const test = [[1, 4], [0, 4]]
+// console.log(test.sort())
+console.log(mergeNo(intervals))

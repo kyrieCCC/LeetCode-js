@@ -42,4 +42,4 @@ var maxSubArray = function (nums) {
 //动态规划的解法，使用两两比较 pre+item与item，但不能跨位置，这就符合了题目中描述的需要是连续字串
 //另外需要max的作用是max来比较当前的pre与item元素的值大小，可能某一个item就是最大的
 const nums = [-2, 1, -3, 1, -1, 2, 4, -5, 4]
-console.log(maxSubArray(nums))
+console.log(lbd(nums))

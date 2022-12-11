@@ -42,5 +42,6 @@ var longestPalindromepass = function(s) {
 };
 //substr 这个方法不常用
 //滑动窗口判断
+
 const s = "babcc";
-console.log("结果是", longestPalindrome(s));
+console.log("结果是", longestPalindromepassBYME(s));
