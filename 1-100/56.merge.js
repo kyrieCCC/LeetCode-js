@@ -4,7 +4,7 @@
 // 输入：intervals = [[1,3],[2,6],[8,10],[15,18]]
 // 输出：[[1,6],[8,10],[15,18]]
 // 解释：区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
-var merge = function (intervals) {
+var mergeNo = function (intervals) {
     const res = []
     let endIndex = 1,startIndex = 0
     for (let i = 0; i < intervals.length; i++){
@@ -22,5 +22,28 @@ var merge = function (intervals) {
     return res
 };
 // 我的失败版本，有待改进
+
+
+var merge = function (intervals) {
+    const res = []
+    intervals.sort((a, b) => a[0] - b[0]) //数组排序
+    let pre = intervals[0] // 第一个值
+    for (let i = 1; i < intervals.length; i++){
+        let cur = intervals[i] //要与第一个值进行比较的值
+        if (pre[1] >= cur[0]) {
+            pre[1] = Math.max(pre[1], cur[1]) //比较后用pre存储结果
+        }
+        else {
+            res.push(pre) //放到res
+            pre = cur //更新pre
+        }
+    }
+    res.push(pre)
+    return res
+};
+//这个做法是滑动来判断前一个数组的第二个数与后一个数组的第一个数
+//pre来进行比较
 const intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
+const test = [[1, 4], [0, 4]]
+console.log(test.sort())
 console.log(merge(intervals))
