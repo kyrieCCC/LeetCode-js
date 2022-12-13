@@ -25,7 +25,7 @@ var twoSum = function(nums, target) {
         }
     }
 };
-
+//第一个解法的时间复杂度为on²  第二个解法的复杂度为on
 const nums = [2, 7, 11, 5]
 const target = 9
 const result = twoSum(nums, target);
