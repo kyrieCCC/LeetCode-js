@@ -8,13 +8,15 @@
 // 输出：true
 var isValidBST = function (root) { 
     const dfs = (root, lower, upper) => {
-        if (!root) {
+        if (!root) { //递归终止条件
             return true
         }
-        if (root.val <= lower || root.val >= upper) {
+        if (root.val <= lower || root.val >= upper) { //判断大小
             return false
         }
-        return dfs(root.left, lower, root.val) && dfs(root.right, root.val, upper)
+        return dfs(root.left, lower, root.val) && dfs(root.right, root.val, upper) ///递归
     }
     return dfs(root, -Infinity, Infinity)
 }
+//这里使用的递归的方法，定义dfs来递归寻找子树的每一个value，然后于lower或者upper对比看是否出现差异
+//如果左子树的values大于root那么返回flase，相反，我们会返回true
