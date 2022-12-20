@@ -23,3 +23,23 @@ var levelOrder = function (root) {
 }
 //这里我们因为是层序遍历，我们需要返回每一层的结果，所以我们使用层序遍历
 //res每次循环都新增一个空数组，把这一层的全部节点都放到这个空数组当中
+
+var levelOrder = function (root) { 
+    const res = []
+    if (!root) {
+        return res
+    }
+    const tempArr = []
+    tempArr.push(root)
+    while (tempArr.length) {
+        let len = tempArr.length
+        res.push([])
+        for (let i = 0; i < len; i++){
+            let node = tempArr.shift()
+            res[res.length - 1].push(node.val)
+            if (node.left) tempArr.push(node.left)
+            if(node.right) tempArr.push(node.right)
+        }
+    }
+    return res
+}
