@@ -18,5 +18,8 @@ var wordBreak = function(s, wordDict) {
     }
     return dp[s.length]
 };
+//这是使用动态规划的方法，击败94.10%
+//当我们切割的是我们拿到的切割出来的子串以后我们拿到字典里面进行查找是否存在
+//如果存在我们就会将这一字串的前后都打上true标识，这样当我们的最后一个字符没有为true就会失败
 const s = "leetcode", wordDict = ["leet", "code"]
 console.log(wordBreak(s, wordDict))
