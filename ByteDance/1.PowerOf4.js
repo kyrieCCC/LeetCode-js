@@ -8,13 +8,12 @@
 // 输入："70368744177664"，输出：true
 // 限定语言：C、 C++、Java、Python、JavaScript V8
 const myFun = (str) => {
-    // const Num = parseInt(str)
-    // if (Num % 4 === 0) {
-    //     return true
-    // }
-    // return false
-    return parseInt(str) % 4 === 0 ? true : false
+    let num = parseInt(str)
+    while (num >= 4) {
+        num = num / 4
+    }
+    return num === 1 ? true : false
 }
 
-const str = "4"
+const str = "70368744177664"
 console.log(myFun(str))
