@@ -24,3 +24,31 @@ var detectCycle1 = function (head) {
     return null
 }
 //这是对map的优化，本质上都是使用了哈希表的方式，用set的方式更简单
+
+var detectCycle2 = function (head) { 
+    if (!head) {
+        return null
+    }
+    let slow = head, fast = head
+    while (fast !== null) {
+        slow = slow.next
+        if (fast.next !== null) {
+            fast = fast.next.next
+        }
+        else {
+            return null
+        }
+        if (fast === slow) {
+            let node = head
+            while (node !== slow) {
+                node = node.next
+                slow = slow.next
+            }
+            return node
+        }
+    }
+    return null
+}
+//这个方法使用的是快慢指针，在第一圈的时候我们的快指针会首先进入到环中
+//然后在环中“追逐”慢指针，在slow第一圈的时候肯定能找到慢指针，随后慢指针进入到环
+//跟我们的node碰了个正着，于是循环结束，node就是我们的环的节点
