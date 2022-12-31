@@ -12,6 +12,6 @@ const quickSort = function (arr) {
     }
     return quickSort(left).concat(midItem, quickSort(right))
 }
-
+//快速排序的思路就是分为左右两边进行递归
 const result = quickSort(arr)
 console.log(result)
