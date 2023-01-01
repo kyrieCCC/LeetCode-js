@@ -13,6 +13,8 @@ function moneyChanage(money) {
     }
     return res.join('')
 }
+//使用逆序的遍历的思路，每当count为3的时候，就会在对应的位置插入一个 “,”
+//需要注意的是需要设置count==0的时候不插入逗号
 const money = 10000
 const result = moneyChanage(money)
 console.log(result)
