@@ -14,6 +14,6 @@ const myFun = (str) => {
     }
     return num === 1 ? true : false
 }
-
+//要注意4的幂除以4到最后一定为1
 const str = "70368744177664"
 console.log(myFun(str))
