@@ -12,9 +12,13 @@ var rob = function (nums) {
     dp[0] = 0
     dp[1] = nums[0]
     for (let i = 2; i <= nums.length; i++){
-        dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i - 1])
+        dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i - 1]) //动态规划方程
     }
     return dp[nums.length]
 };
+//本体使用了动态规划的方法，击败82%
+//我们提前制作出一个新的数组dp
+//每当我们计算dp的下一个值得时候就与前面得值进行比较，每次dp的最长的值代表的就是这个长度能获取到的最大值
+//动态规划的重点在于找到动态规划的方程，这样才能更直观的解决问题
 const nums = [2,1,1,2]
 console.log(rob(nums));
