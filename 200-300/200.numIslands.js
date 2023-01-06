@@ -14,15 +14,15 @@ var numIslands = function (grid) {
     for (let i = 0; i < grid.length; i++){
         for (let j = 0; j < grid[0].length; j++){
             if (grid[i][j] === "1") {
-                count++
-                changeToZero(i, j, grid)
+                count++ //遇到陆地count加一
+                changeToZero(i, j, grid) //让陆地周围变成海洋
             }
         }
     }
     return count
 };
 
-const changeToZero = (i, j, grid) => {
+const changeToZero = (i, j, grid) => { //这个函数让我们的陆地周围变成海洋
     if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] === "0") {
         return 
     }
@@ -32,6 +32,12 @@ const changeToZero = (i, j, grid) => {
     changeToZero(i + 1, j, grid)
     changeToZero(i - 1, j, grid)
 }
+
+//使用dfs的方法，击败了94.60%的人
+//我们首先在网格里面寻找是否有陆地，也就是为“1”的数值
+//找到后，我们让count加一，随后我们让陆地周围的陆地变成海
+//这样可以让陆地独立出来，不会影响接下来的循环判断
+//最后计算出count的数量就是陆地的数量
 
 const grid = [
     ["1", "1", "1", "1", "0"],
