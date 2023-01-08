@@ -23,7 +23,16 @@ const quick = (nums) => {
     }
     return quick(left).concat(midItem, quick(right))
 }
+//因为题目中要求到我们使用on复杂度的算法进行计算，所以我们这里使用快速排序的方法
+//快速排序的方法简单来说就是利用了递归和循环的方法
+//快速排序可以减少我们的时间复杂度
+//除此之外，堆排序还有冒泡排序等方法也是可行的
+
+const findKthLargest2 = (nums, k) => {
+    nums.sort((a, b) => a - b)
+    return nums[nums.length - k]
+}
 
 const nums = [3, 2, 1, 5, 6, 4],
   k = 2;
-console.log(findKthLargest(nums, k));
+console.log(findKthLargest2(nums, k));
