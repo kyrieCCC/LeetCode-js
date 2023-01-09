@@ -49,5 +49,6 @@ var canFinish = function(numCourses, prerequisites) {
 //取出入度为0的数值，循环到最后判断是否入度为0， 为0就放到queue当中
 //最后我们比较我们预期的选课数是否与实际选科数相同，相同则可行
 
-const numCourses = 2, prerequisites = [[1,4],[2,4],[3,1],[3,2]]
-console.log(canFinish2(numCourses, prerequisites))
+
+const numCourses = 2, prerequisites = [[1, 4], [2, 4], [3, 1], [3, 2]]
+console.log(canFinish(numCourses, prerequisites))
