@@ -9,18 +9,23 @@ var lowestCommonAncestor = function (root, p, q) {
     const find = (root, p, q) => {
         if (root === null || root === p || root === q) {
             return root
-        }
-        let left = find(root.left, p, q)
+        }//但我们到达底部或者找到p，q就返回当前的值
+        let left = find(root.left, p, q) //递归寻找对应值
         let right = find(root.right, p, q)
         if (left !== null && right !== null) {
-            return root
+            return root //当左右不为空，这个时候的root为公共祖先
         }
-        if (left === null) {
+        if (left === null) { //左为空说明右边找到了值，return出来
             return right
         }
-        return left
+        return left //这个是右边为空左边不为空的情况
     }
     return find(root, p, q)
 }
 
 //击败96.16%
+//本题使用的方法是回溯and递归来找到p，q的值
+//思路就是我们二叉树中进行递归，寻找我们的p， q值
+//当我们找到了对应的值就把这个值return回去
+//当左右都return了值，说明这个时候就是找到了公共祖先，我们直接把return root即可
+//需要用到后序遍历的知识点（左->右->中）
