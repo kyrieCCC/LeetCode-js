@@ -23,14 +23,17 @@ var productExceptSelfLow = function(nums) {
     }
     return res
 };
+//本方法时间复杂度为on²，超出了允许的时间范围，但是能通过全部用例
+//什么情况
 
 const productExceptSelf = (nums) => {
-    const res = new Array(nums.length)
-    res[0] = 1
+    const res = new Array(nums.length) 
+    res[0] = 1 
+    //res[i]表示索引为i 的左边的所有元素的乘积
     for (let i = 1; i < nums.length; i++){
         res[i] = res[i - 1] * nums[i - 1]
     }
-
+    //right为右边所有元素的乘积
     let right = 1
     for (let i = nums.length - 1; i >= 0; i--){
         res[i] = res[i] * right
@@ -39,5 +42,11 @@ const productExceptSelf = (nums) => {
     return res
 }
 
-const nums = [-1,1,0,-3,3]
+//上面的解法的时间复杂度为on，空间复杂度o1
+//简单来说就是将原数组分为两部分，左边和右边
+//左边的数组直接用res进行表示， 右边的数组使用right进行表示
+//初始的左边并没有元素，所以res[0] = 1， 随后开始循环左边
+//然后循环右边，最后得到的res即为目标数组
+
+const nums = [-1, 1, 0, -3, 3]
 console.log(productExceptSelf(nums))
