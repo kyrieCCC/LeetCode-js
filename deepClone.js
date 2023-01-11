@@ -24,3 +24,24 @@ const objCycle2 = JSON.parse(JSON.stringify(obj))
 console.log(obj2)
 //这个时候的编译就会出错，显示的错误是JSON不支持拷贝循环引用的对象
 //除了JSON还有许多实现深拷贝的方法
+
+
+//2. MessageChannel
+//我们使用一个叫做“信息隧道”的方法也可以完成深度克隆
+const deepCloneMsg = (obj) => {
+    return Promise((resolve) => {
+        const { port1, port2 } = new MessageChannel()
+        port1.postMessage(obj)
+        port2.onmessage = (msg) => {
+            resolve(msg.data)
+        }
+    })
+}
+
+deepCloneMsg(obj).then(item => console.log(obj))
+//这个方法惊天地泣鬼神，惊呆面试官哈哈哈
+//我们需要了解MessageChannel函数，以下内容包含外部文档
+//Channel Messaging API 的 MessageChannel 接口允许我们创建一个新的消息通道，并通过它的两个 MessagePort 属性发送数据。
+//这个方法我们解构出两个端口对象port1 与 port2
+//port1通过postMessage方法传递一个内容
+//port2通过onmessage通过回调函数来接收一个内容
