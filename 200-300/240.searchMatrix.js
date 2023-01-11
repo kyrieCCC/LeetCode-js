@@ -52,5 +52,9 @@ var searchMatrix3 = function (matrix, target) {
     return false
 }
 
+//本题使用的是Z字型查找的方法，时间复杂度同为o（n+m）
+//同样是利用题目中的排序的特性，与target进行比较
+//比较后能得出具体的区间，随后进行查找
+
 const matrix = [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]], target = 5
 console.log(searchMatrix3(matrix, target))
