@@ -56,5 +56,36 @@ var searchMatrix3 = function (matrix, target) {
 //同样是利用题目中的排序的特性，与target进行比较
 //比较后能得出具体的区间，随后进行查找
 
+
+var searchMatrix4 = function(matrix, target) {
+    for(const item of matrix){
+        if(find(item, target) >= 0){
+            return true
+        }
+    }
+    return false
+};
+const find = (nums, target) => {
+    let left = 0, right = nums.length - 1
+    while (left <= right) {
+        let mid = Math.floor((right - left) / 2) + left
+        if(nums[mid] === target){
+            return mid
+        }
+        else if(nums[mid] > target){
+            right = mid - 1
+        }
+        else{
+            left = mid + 1
+        }
+    }
+    return -1
+}
+
+//二分查找，道理同上面几题
+//时间复杂度为o mlogn
+//本质上还是在二维数组中寻找一个区间是target属于的
+//再从小区间里细分target
+
 const matrix = [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]], target = 5
-console.log(searchMatrix3(matrix, target))
+console.log(searchMatrix4(matrix, target))
