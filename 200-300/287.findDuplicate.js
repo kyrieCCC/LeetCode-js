@@ -22,12 +22,12 @@ var findDuplicate1 = function (nums) {
 var findDuplicate = function (nums) { 
     let slow = 0, fast = 0
     do {
-        slow = nums[slow]
-        fast = nums[nums[fast]]
+        slow = nums[slow] 
+        fast = nums[nums[fast]] //快慢指针移动
     } while (slow != fast)
     slow = 0
     while (slow != fast) {
-        slow = nums[slow]
+        slow = nums[slow] //找到相同值
         fast = nums[fast]
     }
     return slow
@@ -36,7 +36,7 @@ var findDuplicate = function (nums) {
 //使用了快慢指针的解法，本质上就是是在查看是否存在环
 //击败80.95%
 //快慢指针的解法时间复杂度为on，空间复杂度为o1
-//
+
 
 const nums = [1, 3, 4, 6, 6]
 console.log(findDuplicate(nums))
