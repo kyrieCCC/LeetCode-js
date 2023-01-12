@@ -6,7 +6,7 @@
 // 输出：2
 // 输入：nums = [3,1,3,4,2]
 // 输出：3
-var findDuplicate = function (nums) { 
+var findDuplicate1 = function (nums) { 
     const map = new Map()
     for (let i = 0; i < nums.length; i++){
         if (map.has(nums[i])) {
@@ -18,6 +18,25 @@ var findDuplicate = function (nums) {
 //本方法能通过测试用例，但并不是正确答案
 //题目要求本题的空间复杂度为o1，但是map超出了空间复杂度的阈值
 //所以并不是本题的最优解
+
+var findDuplicate = function (nums) { 
+    let slow = 0, fast = 0
+    do {
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+    } while (slow != fast)
+    slow = 0
+    while (slow != fast) {
+        slow = nums[slow]
+        fast = nums[fast]
+    }
+    return slow
+}   
+
+//使用了快慢指针的解法，本质上就是是在查看是否存在环
+//击败80.95%
+//快慢指针的解法时间复杂度为on，空间复杂度为o1
+//
 
 const nums = [1, 3, 4, 6, 6]
 console.log(findDuplicate(nums))
