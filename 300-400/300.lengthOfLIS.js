@@ -39,5 +39,17 @@ var lengthOfLIS = function (nums) {
 //这样就能得到一个升序的最长子序列
 //并且count的值就是题目所求的最长子序列的长度
 
+const lengthOfLISDp = (nums) => {
+    const dp = new Array(nums.length).fill(1)
+    for (let i = 1; i < nums.length; i++){
+        for (let j = 0; j < i; j++){
+            if (nums[i] > nums[j]) {
+                dp[i] = Math.max(dp[i], dp[j] + 1)
+            }
+        }
+    }
+    return Math.max(...dp)
+}
+
 const nums = [10, 9, 2, 5, 3, 7, 101, 18]
-console.log(lengthOfLIS(nums))
+console.log(lengthOfLISDp(nums))
