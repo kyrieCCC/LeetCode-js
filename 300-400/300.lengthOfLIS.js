@@ -6,11 +6,11 @@
 // 输出：4
 // 解释：最长递增子序列是 [2,3,7,101]，因此长度为 4 。
 var lengthOfLIS = function (nums) { 
-    const res = []
-    let count = 0
+    const res = [] //定义存放最长子序列的数组
+    let count = 0 //堆的数量
     for (let i = 0; i < nums.length; i++){
         let left = 0, right = count
-        while (left < right) {
+        while (left < right) {//二分查找
             const mid = left + Math.floor((right - left) / 2)
             if (res[mid] > nums[i]) {
                 right = mid
@@ -22,15 +22,22 @@ var lengthOfLIS = function (nums) {
                 right = mid
             }
         }
-        if (left === count) {
+        if (left === count) { //新建堆
             count++
         }
-        res[left] = nums[i]
+        res[left] = nums[i]//“盖住原来的值，如果盖不住就新建一个堆后放在堆顶”
     }
-    return count
+    return count//堆的数量即为所求的目标值
 }
 
 //击败96.36%
+//本题使用的方法是贪心算法＆二分查找
+//定义一个res是存放当前堆里边的最小数值
+//每次到下一个位置的数字小于这个res的当前值，就可以“压住他”
+//如果没有小于这个数值的值
+//就新建一个堆，count++
+//这样就能得到一个升序的最长子序列
+//并且count的值就是题目所求的最长子序列的长度
 
 const nums = [10, 9, 2, 5, 3, 7, 101, 18]
 console.log(lengthOfLIS(nums))
