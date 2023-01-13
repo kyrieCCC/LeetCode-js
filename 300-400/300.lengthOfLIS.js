@@ -40,16 +40,21 @@ var lengthOfLIS = function (nums) {
 //并且count的值就是题目所求的最长子序列的长度
 
 const lengthOfLISDp = (nums) => {
-    const dp = new Array(nums.length).fill(1)
+    const dp = new Array(nums.length).fill(1) //初始化动态规划数组
     for (let i = 1; i < nums.length; i++){
         for (let j = 0; j < i; j++){
-            if (nums[i] > nums[j]) {
+            if (nums[i] > nums[j]) {//当前的数值大于前面的任意一个，就会返回dp[j] + 1与当前的dp[i]进行比较
                 dp[i] = Math.max(dp[i], dp[j] + 1)
             }
         }
     }
     return Math.max(...dp)
 }
+
+//本题使用的是动态规划的方法，时间复杂度为on²
+//dp[i]表示的是0 - i索引的最大子序列
+//返回的时候只需要找出dp的最大值，就是本题的答案
+
 
 const nums = [10, 9, 2, 5, 3, 7, 101, 18]
 console.log(lengthOfLISDp(nums))
