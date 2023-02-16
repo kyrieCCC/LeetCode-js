@@ -42,6 +42,11 @@ maxProfit2 = (prices) => {
     }
     return dp[n - 1][0]
 }
+//上述代码使用了状态转移方程， 0代表不持有股票，1代表持有股票
+//dp[i][0] 代表的是在第i天的时候，不持有股票的状态
+//dp[i][1] 代表的是在第i天的时候，持有股票的状态
+//定义好状态转移方程后，进行循环，dp[prices.length - 1][0]即代表最高利润
+
 
 const prices = [1, 2, 3, 0, 2]
 console.log(maxProfit2(prices));
