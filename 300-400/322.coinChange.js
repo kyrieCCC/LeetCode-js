@@ -20,5 +20,10 @@ var coinChange = function (coins, amount) {
     return dp[amount] === Infinity ? -1 : dp[amount]
 }
 
+//本题使用的是动态规划的方法，dp[i]代表的是当amount为i的时候需要的最少数
+//第一层for循环代表每一个存在在coins里面的数字
+//第二层循环代表的是有这一个数字要达到amount需要的最少数字
+//时间复杂度on²
+
 const coins = [1, 2, 5], amount = 11
 console.log(coinChange(coins, amount));
