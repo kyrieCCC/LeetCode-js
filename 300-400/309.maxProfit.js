@@ -21,5 +21,27 @@ var maxProfit = function (prices) {
 //实质上运用了状态转移方程来进行计算，将方程简化为了sell与buy
 //下面将给出状态方程的解放，更加详细具体
 
+maxProfit2 = (prices) => {
+    const n = prices.length
+    // const dp = new Array(n).fill([])
+    const dp = []
+    for (let i = 0; i < n; i++){
+        dp[i] = []
+    }
+    console.log(dp)
+    if (prices.length <= 1) {
+        return 0
+    }
+    dp[0][0] = 0
+    dp[0][1] = -prices[0]
+    dp[1][0] = Math.max(dp[0][0], dp[0][1] + prices[1])
+    dp[1][1] = Math.max(dp[0][1], -prices[1])
+    for (let i = 2; i < n; i++){
+        dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+        dp[i][1] = Math.max(dp[i - 1][1], dp[i - 2][0] - prices[i])
+    }
+    return dp[n - 1][0]
+}
+
 const prices = [1, 2, 3, 0, 2]
-console.log(maxProfit(prices));
+console.log(maxProfit2(prices));
