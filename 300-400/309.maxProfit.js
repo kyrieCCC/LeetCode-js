@@ -18,7 +18,8 @@ var maxProfit = function (prices) {
     }
     return sell
 }
-
+//实质上运用了状态转移方程来进行计算，将方程简化为了sell与buy
+//下面将给出状态方程的解放，更加详细具体
 
 const prices = [1, 2, 3, 0, 2]
 console.log(maxProfit(prices));
