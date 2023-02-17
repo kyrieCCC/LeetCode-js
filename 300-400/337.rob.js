@@ -23,4 +23,7 @@ var rob = function (root) {
     return Math.max(result[1], result[0])
 }
 
-// 92.46%
+// 击败了92.46%
+// 使用了递归 + 动态规划的方法
+// 主要是递归遍历二叉树的每一个节点，然后根据这些节点来确定最大值
+// 分为两个部分selected和notSelected代表选中该节点和没选中该节点的两个值
