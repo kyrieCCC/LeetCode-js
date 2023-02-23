@@ -44,7 +44,7 @@ var maxSubArray = function (nums) {
 
 
 
-
+//每次寻找最大的窜，找不到就直接加上原来的
 const add = (nums) => {
     let res = 0
     for (let i = 0; i < nums.length; i++){
