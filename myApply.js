@@ -1,4 +1,4 @@
-//让我们来手撕一下apply吧 0.0
+//让我们来手撕一下apply算法吧 0.0
 function ppp(arr) {
     console.log('arr is ', arr)
     console.log('this', this)
