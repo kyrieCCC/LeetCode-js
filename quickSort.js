@@ -1,3 +1,4 @@
+//快速排序方法
 const arr = [5, 2, 7, 8, 34, 7, 39, 12, 56, 9, 1]
 const quickSort = function (arr) {
     if (arr.length <= 1) {
