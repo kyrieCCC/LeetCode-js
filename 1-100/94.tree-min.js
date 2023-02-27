@@ -3,6 +3,7 @@
 // 输入：root = [1,null,2,3]
 // 输出：[1,3,2]
 
+//1. 循环方法
 var inorderTraversal = function (root) { 
     const res = []
     const skt = []
@@ -19,6 +20,8 @@ var inorderTraversal = function (root) {
 }
 //遍历左节点，把全部左节点放到skt数组中，直到最后一个左节点
 
+
+//2. 递归方法
 var inorderTraversal = function(root) {
     const res = [];
     const inorder = (root) => {
