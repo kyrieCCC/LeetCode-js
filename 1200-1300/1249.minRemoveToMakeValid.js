@@ -92,5 +92,11 @@ const minRemoveToMakeValid = (s) => {
     return res.join('')
 }
 
+//击败90%的js
+//使用栈的思想进行开发，首先找到出现的左括号
+// 再把左括号放到栈中，若后续遇到右括号，则将最后一个栈元素pop出
+// 若栈空，则代表前面没有左括号，可以直接删除右括号
+// 返回res再把其字符串化
+
 const s = "lee(t(co)de)"
 console.log(minRemoveToMakeValid(s))
