@@ -31,6 +31,7 @@ var maxSubArrayTimeout = function(nums) {
 //很可惜的是多了一步，我们使用双循环的方法一个指向头部一个指向尾部，就可以拿到最大值
 //这个版本的答案是可行的，但是因为我们的事件复杂度太高，超时
 //新的解法如下
+//字节跳动
 var maxSubArray = function (nums) { 
     let pre = 0, max = nums[0]
     nums.forEach(item => {
@@ -59,4 +60,5 @@ const add = (nums) => {
 
 const nums = [-2, 1, -3, 1, -1, 2, 4, -5, 4]
 const nums1 = [5, 4, -1, 7, 8]
-console.log(add(nums1))
+const nums2 = [1]
+console.log(maxSubArray(nums2))
