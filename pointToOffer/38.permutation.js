@@ -15,7 +15,7 @@ var permutation = function (s) {
             }
             vis[j] = true
             perm.push(arr[j])
-            backTrack(i + 1, n, arr, perm)
+            backTrack(i + 1, n, arr, perm) 
             perm.pop()
             vis[j] = false
         }
@@ -28,6 +28,11 @@ var permutation = function (s) {
     }
     return resArr
 }
+
+//击败30% 字节跳动春招练习
+//本题使用的是回溯算法的思路，将单个字母拆分出来
+//将剩余的字母不同排列插入
+//要注意其中有重复的元素判断，再if判断跳条件中过滤
 
 const s = "abc"
 console.log(permutation(s))
