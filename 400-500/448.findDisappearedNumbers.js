@@ -16,6 +16,7 @@ var findDisappearedNumbers = function (nums) {
             continue
         }
         [nums[index], nums[i]] = [nums[i], nums[index]]  //排序，把数字放到对应的位置上
+        console.log(nums);
     }
     const res = []
     for (let j = 0; j < nums.length; j++){ //遍历排序后的数组，看看缺少了那些数字
@@ -25,7 +26,7 @@ var findDisappearedNumbers = function (nums) {
     }
     return res
 }
-
+// mihoyo春季招聘练习题
 
 const nums = [4, 3, 2, 7, 8, 2, 3, 1]
 const result = findDisappearedNumbers(nums)
