@@ -19,6 +19,10 @@ var firstMissingPositive = function (nums) {
     }
     return nums.length + 1
 }
+//击败92%的用户
+// 首先我们需要将得到的数组进行排序，排序的方式与查找消失的数字类似
+// 排序结束后可以按顺序遍历数组中的值
+// 查看哪一个值不符合序号的下标，则输出对应下标
 
 const nums = [1, 2, 0]
 console.log(firstMissingPositive(nums));
