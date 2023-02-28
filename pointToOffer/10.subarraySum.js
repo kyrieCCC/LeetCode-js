@@ -40,6 +40,7 @@ const subarraySumPlus = (nums, k) => {
     return count
 }
 
+//击败98%，mihoyo与腾讯春招
 //与leetcode第一题类似，使用map来记录每一个和的位置
 //当指定的连续子串和达到指定目标，count+1
 //若不是则map.set
