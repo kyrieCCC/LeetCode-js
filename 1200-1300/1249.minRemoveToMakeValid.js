@@ -98,5 +98,27 @@ const minRemoveToMakeValid = (s) => {
 // 若栈空，则代表前面没有左括号，可以直接删除右括号
 // 返回res再把其字符串化
 
-const s = "lee(t(co)de)"
-console.log(minRemoveToMakeValid(s))
+const s = "()("
+
+const test = (s) => {
+    const res = [...s]
+    const stack = []
+    for (let i = 0; i < s.length; i++){
+        if (s[i] === "("){
+            stack.push(i)
+        }
+        else if (s[i] === ')') {
+            if (stack.length === 0) {
+                delete(res[i])
+            }
+            else { 
+                stack.pop()
+            }
+        }
+    }
+    while (stack.length) {
+        delete(res[stack.pop()])
+    }
+    return res.join('')
+}
+console.log(test(s))
