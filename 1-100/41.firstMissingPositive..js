@@ -24,5 +24,33 @@ var firstMissingPositive = function (nums) {
 // 排序结束后可以按顺序遍历数组中的值
 // 查看哪一个值不符合序号的下标，则输出对应下标
 
+//2. 另一个做法
+const firstMissingPositivePlus = (nums) => {
+    if (nums.length === 0) {
+        return 1
+    }
+    if (nums.length === 1 && nums[i] <= 0) {
+        return 1
+    }
+    const arr = []
+    for (let i = 0; i < nums.length; i++){
+        if (nums[i] >= 1) {
+            arr[nums[i]] = true
+        }
+    }
+
+    if (!arr.length) return 1
+    
+    for (let i = 1; i < arr.length; i++){
+        if (!arr[i]) {
+            return i
+        }
+    }
+    return arr.length
+}
+//与上个题解法类似
+//mihoyo春招练习
+
+
 const nums = [1, 2, 0]
-console.log(firstMissingPositive(nums));
+console.log(firstMissingPositivePlus(nums));
