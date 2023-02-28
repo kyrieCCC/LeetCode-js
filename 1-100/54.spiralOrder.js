@@ -32,5 +32,10 @@ var spiralOrder = function (matrix) {
     return res
 }
 
+//击败60，腾讯春招冲刺
+// 使用的方法就是循环，依次进行右下左上的循环顺序
+// 每次转完一圈后让边界缩小一圈，然后继续进行循环
+// 直到遍历完矩阵中的所有数值
+
 const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 console.log(spiralOrder(matrix));
