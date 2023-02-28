@@ -20,5 +20,29 @@ var subarraySum = function (nums, k) {
     return count
 }
 
-const nums = [1, 1, 1], k = 2
-console.log(subarraySum(nums, k));
+//2. map解决双循环的时间复杂度高的问题
+const subarraySumPlus = (nums, k) => {
+    const map = new Map()
+    map.set(0, 1)
+    let count = 0, pre = 0
+    for (let i = 0; i < nums.length; i++){
+        pre = pre + nums[i]
+        if (map.has(pre - k)) {
+            count = map.get(pre - k) + count
+        }
+        if (map.has(pre)) {
+            map.set(pre, map.get(pre) + 1)
+        }
+        else {
+            map.set(pre, 1)
+        }
+    }
+    return count
+}
+
+//与leetcode第一题类似，使用map来记录每一个和的位置
+//当指定的连续子串和达到指定目标，count+1
+//若不是则map.set
+
+const nums = [1, 1, 1], k = 3
+console.log(subarraySumPlus(nums, k));
