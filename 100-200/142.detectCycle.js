@@ -90,3 +90,6 @@ const detectCycleFast = (head) => {
     }
     return null
 }
+
+//更新了两个做法，tag和快慢指针法
+//其中tag法可以击败90%+, 字节跳动春招练习
