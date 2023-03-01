@@ -52,3 +52,41 @@ var detectCycle2 = function (head) {
 //这个方法使用的是快慢指针，在第一圈的时候我们的快指针会首先进入到环中
 //然后在环中“追逐”慢指针，在slow第一圈的时候肯定能找到慢指针，随后慢指针进入到环
 //跟我们的node碰了个正着，于是循环结束，node就是我们的环的节点
+
+const detectCycleTag = (head) => {
+    while (head) {
+        if (head.tag) {
+            return head
+        }
+        else {
+            head.tag = 1
+            head = head.next
+        }
+    }
+    return null
+}
+
+const detectCycleFast = (head) => {
+    if (!head) {
+        return null
+    }
+    let slow = head, fast = head
+    while (fast != null) {
+        slow = slow.next
+        if (fast.next != null) {
+            fast = fast.next.next
+        }
+        else {
+            return null
+        }
+        if (fast === slow) {
+            let node = head
+            if (node !== slow) {
+                node = node.next
+                slow = slow.next
+            }
+            return node
+        }
+    }
+    return null
+}
