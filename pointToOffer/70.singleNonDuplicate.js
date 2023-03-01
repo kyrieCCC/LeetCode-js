@@ -35,5 +35,24 @@ const singleNonDuplicate_2 = (nums) => {
         }
     }
 }
+
+//3. 第三种解法，异或＆二分查找，符合规定的时空间复杂度
+const singleNonDuplicate_3 = (nums) => {
+    let left = 0, right = nums.length - 1
+    while (left < right) {
+        const mid = Math.floor((right - left) / 2) + left
+        if (nums[mid] === nums[mid ^ 1]) {
+            left = mid + 1
+        }
+        else {
+            right = mid
+        }
+    }
+    return nums[left]
+}
+//该解法使用异或方法，当1异或上某一个数字时
+//当这个数字是奇数，则mid - 1， 若这个数字为偶数，则mid + 1
+//通过单个数字两侧的数字的特殊性进行判断
+
 const nums = [1, 1, 2, 3, 3, 4, 4, 8, 8]
-console.log(singleNonDuplicate_2(nums));
+console.log(singleNonDuplicate_3(nums));
