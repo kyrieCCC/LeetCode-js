@@ -22,5 +22,18 @@ var singleNonDuplicate = function (nums) {
     }
 }
 
+
+//2. 第二种解法，同样超时
+const singleNonDuplicate_2 = (nums) => {
+    let i = 0
+    while (i < nums.length) {
+        if (nums[i] !== nums[i + 1]) {
+            return nums[i]
+        }
+        else {
+            i += 2
+        }
+    }
+}
 const nums = [1, 1, 2, 3, 3, 4, 4, 8, 8]
-console.log(singleNonDuplicate(nums));
+console.log(singleNonDuplicate_2(nums));
