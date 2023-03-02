@@ -28,5 +28,11 @@ const addStringsPlus = (num1, num2) => {
 // 其中nums1.charAt(i) - "0" 代表将字符串转换为数字
 // 因为ans是push进去的，所以最后输出的时候需要reverse
 
+
+//BigInt解法，但是不让用，最简单的方法
+const addStrings_big = (num1, num2) => {
+    return  String(BigInt(num1) + BigInt(num2))
+}
+
 const num1 = '11', num2 = '123'
-console.log(addStringsPlus(num1, num2));
+console.log(addStrings_big(num1, num2));
