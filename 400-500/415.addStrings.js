@@ -9,7 +9,7 @@ var addStrings = function(num1, num2) {
     return String(parseInt(num1) + parseInt(num2))
 };
 
-
+//2. 数学解法，利用竖式相加的特性进行计算
 const addStringsPlus = (num1, num2) => {
     let i = num1.length - 1, j = num2.length - 1, add = 0
     const ans = []
@@ -25,7 +25,8 @@ const addStringsPlus = (num1, num2) => {
     return ans.reverse().join('')
 }
 
-
+// 其中nums1.charAt(i) - "0" 代表将字符串转换为数字
+// 因为ans是push进去的，所以最后输出的时候需要reverse
 
 const num1 = '11', num2 = '123'
 console.log(addStringsPlus(num1, num2));
