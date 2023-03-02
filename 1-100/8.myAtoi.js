@@ -33,5 +33,10 @@ var myAtoi = function(s) {
     return 0
 };
 
+//击败99% mihoyo春招练习
+//利用正则表达式匹配，其中trim方法是去掉字符串两边的空格，match方法用于匹配正则表达式
+//匹配完后，比较数字是否超出规定的范围，超出范围则返回指定数值
+//当res没有的时候返回0
+
 const s = '42'
 console.log(myAtoi(s));
