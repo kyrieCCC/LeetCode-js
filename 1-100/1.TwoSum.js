@@ -26,6 +26,7 @@ var twoSum = function(nums, target) {
     }
 };
 //第一个解法的时间复杂度为on²  第二个解法的复杂度为on
+//2023-03-02更新，腾讯春招练习题
 const nums = [2, 7, 11, 5]
 const target = 9
 const result = twoSum(nums, target);
