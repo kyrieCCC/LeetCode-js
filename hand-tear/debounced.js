@@ -13,3 +13,15 @@ function throttle(fn, delay = 500) {
         }
     }
 }
+
+//2. 防抖函数
+//防抖函数就是在第一次执行后，等待一定时间，如果在这段时间内又有事件触发，则清空等待时间，重新开始计时
+function debounced(fn, delay = 500) {
+    let _timer
+    return function () {
+        clearTimeout(_timer)
+        _timer = setTimeout(() => {
+            fn.apply(this, arguments)
+        }, delay);
+    }
+}
