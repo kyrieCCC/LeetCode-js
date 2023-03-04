@@ -15,7 +15,7 @@ var maxProfit = function (prices) {
     }
     return res
 }
-//2023-2-27现在是大三下第三周周一大数据课，腾讯
+//2023-2-27现在是大三下第三周周一大数据课，腾讯,字节春招练习题
 //滑动判断的方法
 const prices = [7,1,5,3,6,4]
 const result = maxProfit(prices)
