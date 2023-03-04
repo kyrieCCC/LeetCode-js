@@ -14,6 +14,12 @@ var subsets = function (nums) {
     }
     return res
 }
+//击败96% 字节跳动春招练习题
+//本题的解法就是循环
+//首先往数组中丢入一个空的数组，随后每次在forEach的时候都重现遍历这个数组
+//拿到之前放入的数值，再重新组合
+//最后拿到子集
+
 
 const nums = [1, 2, 3]
 console.log(subsets(nums));
