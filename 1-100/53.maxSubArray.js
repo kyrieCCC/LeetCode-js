@@ -58,6 +58,8 @@ const add = (nums) => {
     return res
 }
 
+//2023-3-4更新，字节春招练习题
+
 const nums = [-2, 1, -3, 1, -1, 2, 4, -5, 4]
 const nums1 = [5, 4, -1, 7, 8]
 const nums2 = [1]
