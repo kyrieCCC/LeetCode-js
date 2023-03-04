@@ -23,3 +23,24 @@ var getKthFromEnd = function (head, k) {
 //本解决方法非常简单，首先计算出这个链表的长度
 //拿到列表长度后减去k即是我们需要的数值
 //把头节点重置，计算出len-k的链表值即可
+
+//解法二 快慢指针
+const getKthFromEndPlus = (head, k) => {
+    let fast = head, slow = head
+    while (fast && k > 0) {
+        fast = fast.next
+        k = k - 1
+    }
+
+    while (fast) {
+        fast = fast.next
+        slow = slow.next
+    }
+    return slow
+}
+//击败 50% 腾讯春招练习
+//本解法的时间复杂度与上一个解法类似
+//首先定义快慢两个指针，随后快指针首先开始走动，走出k个距离
+//这样slow指针由于还在出发点，于是两个指针之间距离为k
+//随后让fast与slow两个指针同时移动，当fast指针到达最后一个点的时候，即slow为倒数k
+//返回slow即可
