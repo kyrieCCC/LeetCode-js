@@ -43,3 +43,22 @@ var constructMaximumBinaryTree = function (nums) {
 //首先通过循环拿到规定的子数组中的最大值，分离出左右两个部分作为左右子树
 //每次执行函数都会创建一个树节点treenode
 //递归完成后的node即为父节点
+
+
+//解法二 单调栈
+const constructMaximumBinaryTreePlus = (nums) => {
+    const tree = new Array(nums.length).fill(0)
+    const stack = []
+    for (let i = 0; i < nums.length; i++){
+        tree[i] = new TreeNode(nums[i])
+        while (stack.length && nums[i] > nums[stack[stack.length - 1]]) {
+            tree[i].left = tree[stack[stack.length - 1]]
+            stack.pop()
+        }
+        if (stack.length) {
+            tree[stack[stack.length - 1]].right = tree[i]
+        }
+        stack.push(i)
+    }
+    return tree[stack[0]]
+}
