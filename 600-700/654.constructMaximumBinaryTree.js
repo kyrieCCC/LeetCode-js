@@ -62,3 +62,5 @@ const constructMaximumBinaryTreePlus = (nums) => {
     }
     return tree[stack[0]]
 }
+//本解法使用单调栈的方法
+//每次都判断下一个数值排列的位置，记录下来直接放到二叉树的子树或者是root
