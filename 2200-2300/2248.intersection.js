@@ -36,9 +36,22 @@ var intersection = function (nums) {
 //最后别忘了排序
 
 
+//解法二 模拟计数
+const intersection_2 = (nums) => {
+    const count = new Array(1100).fill(0)
+    for (const numArr of nums) {
+        for (const item of numArr) {
+            count[item]++
+        }
+    }
+    return count.map((val, index) => val === nums.length ? index : 0).filter(val => val !== 0)
+}
+//第二种方法就是使用一个count来记录每一个数值出现的次数
+//最后再使用map进行遍历拿出次数为3的数值
+//但这个方法相比于第一个方法要更好 ，因为不用进行二次排序
 
 
 const nums1 = [[25, 44, 47, 42, 43, 10], [40, 10, 8, 30, 5, 23], [36, 10]]
 const nums2 = [[4, 43, 15, 30, 27, 22], [15, 30, 43, 27, 10, 4]]
 console.log(intersection(nums1));
-console.log(intersection(nums2));
+console.log(intersection_2(nums2));
