@@ -37,3 +37,9 @@ var constructMaximumBinaryTree = function (nums) {
     }
     return buildTree(nums, 0, nums.length - 1)
 }
+
+//击败96% mihoyo春季招聘练习题
+//本题使用的方法是递归法
+//首先通过循环拿到规定的子数组中的最大值，分离出左右两个部分作为左右子树
+//每次执行函数都会创建一个树节点treenode
+//递归完成后的node即为父节点
