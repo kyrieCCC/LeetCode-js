@@ -23,7 +23,7 @@ var lowestCommonAncestor = function (root, p, q) {
     return find(root, p, q)
 }
 
-//击败96.16%
+//击败96.16%, mihoyo春招练习题
 //本题使用的方法是回溯and递归来找到p，q的值
 //思路就是我们二叉树中进行递归，寻找我们的p， q值
 //当我们找到了对应的值就把这个值return回去
