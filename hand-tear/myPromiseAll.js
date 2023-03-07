@@ -22,6 +22,8 @@ const myPromiseAll = ((promiseTask) => {
         });
     })
 })
+
+
 const promiseTask = [p1, p2, p3]
 Promise.all(promiseTask).then(res => console.log(res))
-myPromiseAll(promiseTask).then(res => console.log(res))
+myPromiseAll_2(promiseTask).then(res => console.log(res))
