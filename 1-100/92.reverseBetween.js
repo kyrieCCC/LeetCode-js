@@ -21,3 +21,8 @@ var reverseBetween = function (head, left, right) {
     }
     return node.next
 }
+
+//本解法使用的是穿针引线法，其实就是类似于头插法
+//每次都把划分出来的链表“往后退一位”
+//最后一位换到最前面，剩下的往后瞬移一位
+//这样类似头插法可以实现链表的翻转
