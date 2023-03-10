@@ -12,6 +12,8 @@ var hammingDistance = function (x, y) {
     return ans
 }
 
+//2023-3-10update,美团笔试练习
+
 const x = 4, y = 1
 const res = hammingDistance(x, y)
 console.log(res)
