@@ -19,6 +19,8 @@ var totalHammingDistance = function (nums) {
     return res
 }
 
+//本题使用的思路，首先计算每一位的1的个数，距离就是c*(nums.length - c)
+//最后再把结果累加起来即可
 
 const nums = [4, 14, 2]
 console.log(totalHammingDistance(nums));
