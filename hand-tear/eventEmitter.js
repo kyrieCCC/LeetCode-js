@@ -5,6 +5,7 @@ class eventEmitter {
 
         }
     }
+    //订阅事件
     on(type, callback) {
         if (!this.event[type]) {
             this.event[type] = [callback]
@@ -13,6 +14,7 @@ class eventEmitter {
             this.event[type].push(callback)
         }
     }
+    //发送事件
     emit(type, ...args) {
         if (!this.event[type]) {
             return
@@ -23,6 +25,7 @@ class eventEmitter {
             });
         }
     }
+    //取消订阅
     off(type, callback) {
         if (!this.event[type]) {
             return
@@ -31,6 +34,7 @@ class eventEmitter {
             this.event[type] = this.event[type].filter(item => item !== callback)
         }
     }
+    //只执行一次事件
     once(type, callback) {
         let func = () =>{
             callback()
