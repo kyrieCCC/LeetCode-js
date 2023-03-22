@@ -5,8 +5,10 @@ let b = 2
 
 //使用数学的方法，先计算两个数的和
 //再算出另外一个数的值
-a = a + b
-b = a - b
-a = a - b
+a = a + b;
+b = a - b;
+a = a - b;
+
+[a, b] = [b, a]
 
 console.log(a, b);
