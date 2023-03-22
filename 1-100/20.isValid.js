@@ -58,6 +58,8 @@ var isValid = function (s) {
     }
 }
 
+
+//通过替换的解法，将S中的成对出现的括号找出并删除
 const isValid_true = (s) => {
     if (s.length % 2 !== 0) {
         return false
