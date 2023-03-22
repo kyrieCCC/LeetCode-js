@@ -15,4 +15,6 @@ Function.prototype.myCall = function(...arg){ //...arg代表解构参数
     return res//返回结果
 }
 
-test.myCall({ x: 10 }, 10, 43) //将this指向{x:10}，同时传入参数10，43
+
+
+test.newCall({ x: 10 }, 10, 43) //将this指向{x:10}，同时传入参数10，43

@@ -28,4 +28,16 @@ Function.prototype.myApply = function (obj, arr) {
 //我们只需要根据这个参数数组对应的进行处理即可
 //大概的原理也就是将本来的this改变到myApply传入的对象上
 
-ppp.myApply({ x: 10 }, [1, 2, 3])
+Function.prototype.myNewApply = function(obj, nums){
+    var obj = obj || window, args = []
+    const cur = this
+    obj.fn = cur
+    if (Array.isArray(nums)) {
+        args = nums
+        const res = obj.fn(args)
+        delete obj.fn
+        return res
+    }
+}
+
+ppp.myNewApply({ x: 10 }, [1, 2, 3])

@@ -24,6 +24,21 @@ const myPromiseAll = ((promiseTask) => {
 })
 
 
+
+
+const myPromiseAllqqqqqq = (promiseTask) => {
+    const res = []
+    return new Promise((resolve, reject) => {
+        promiseTask.forEach((item) => {
+            item.then((data) => {
+                res.push(data)
+                if (res.length === promiseTask.length) {
+                    resolve(res)
+                }
+            }).catch(reject)
+        })
+    })
+}
 const promiseTask = [p1, p2, p3]
 Promise.all(promiseTask).then(res => console.log(res))
-myPromiseAll_2(promiseTask).then(res => console.log(res))
+myPromiseAllqqqqqq(promiseTask).then(res => console.log(res))
