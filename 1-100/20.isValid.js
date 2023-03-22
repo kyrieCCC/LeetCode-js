@@ -58,5 +58,18 @@ var isValid = function (s) {
     }
 }
 
-const s = "()[]{"
-console.log(isValid(s));
+const isValid_true = (s) => {
+    if (s.length % 2 !== 0) {
+        return false
+    }
+    const len = s.length / 2
+    for (let i = 0; i < len; i++){
+        s = s.replace("()", "")
+        s = s.replace("[]", "")
+        s = s.replace("{}", "")
+    }
+    return s.length === 0
+}
+
+const s = "()[]{}"
+console.log(isValid_true(s));
