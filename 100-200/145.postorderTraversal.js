@@ -3,6 +3,7 @@
 // 输入：root = [1,null,2,3]
 // 输出：[3,2,1]
 
+
 var postorderTraversal = function (root) { 
     const res = []
     const dfs = (root) => {
@@ -16,3 +17,8 @@ var postorderTraversal = function (root) {
     dfs(root)
     return res
 }
+
+//使用正常遍历二叉树的方式，由于后序遍历为左 右 根的顺序
+//故我们的递归顺序为dfs(root.left) =>  dfs(root.right) => 根节点
+
+       
