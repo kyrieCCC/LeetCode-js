@@ -27,3 +27,6 @@ var isBalanced = function (root) {
     }
     return (dfs(root) != -1)
 }
+
+// 平衡二叉树，使用递归的方式
+// 每一次都会去判断我们的高度差是否超过1，如果超过直接返回-1
