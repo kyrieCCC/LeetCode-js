@@ -1,7 +1,7 @@
-const a = BigInt(19)
-const b = BigInt(11)
+const a = BigInt(22222222222222222222)
+const b = BigInt(11111111111111111111)
 const c = a - b
-// console.log(c)
+console.log(c)
 
 const myFun = (n, arr, len, p1) => {
     const num = 2**(n - 1) - 1
@@ -34,4 +34,4 @@ const myFun = (n, arr, len, p1) => {
 
 const arr = ['1', '2', '3']
 const arr2 = [1, 3, 5]
-myFun(2, arr, arr2.length, arr2)
+// myFun(2, arr, arr2.length, arr2)
