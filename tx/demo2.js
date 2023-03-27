@@ -1,7 +1,7 @@
-const a = BigInt(22222222222222222222)
-const b = BigInt(11111111111111111111)
-const c = a - b
-console.log(c)
+
+//给定一颗满树，给出层序遍历，
+//每当遇到叶子节点，连续输出"YES" "LEAF"
+//若非叶子节点，则输出"YES"以及对应的左右子节点
 
 const myFun = (n, arr, len, p1) => {
     const num = 2**(n - 1) - 1
