@@ -28,6 +28,11 @@ const toRGB = (str) => {
     }
     return str + '  ==>  rbg(' + res.join(", ") + ")"
 }
+//本解法首先分析得到的字符串长度是否为正常的16进制形式长度
+//随后可以进行补位等操作
+//随后拿到每每两位数值，将其转换为10进制，即parseInt('0X' + item)
+//最后输出结果即可
+
 
 const str = '#fff'
 console.log(toRGB(str));
