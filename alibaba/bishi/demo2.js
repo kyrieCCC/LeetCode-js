@@ -8,7 +8,7 @@
  */
 const change = (str) => {
     const arr = str.split(".")
-    // return arr
+    //针对整数部分的处理 
     const leftArr = arr[0]
     const res = []
     let count = 0
@@ -21,6 +21,12 @@ const change = (str) => {
     }
     
     const rightArr = arr[1]
+    //判断是否存在小数
+    if (arr[1] == undefined) {
+        return res.reverse().concat(".00").join("")
+    }
+
+    //如果存在小数，则分别针对一位小数与两位小数进行处理
     const resLeft = []
     if (arr[1].length >= 2) {
         resLeft.push(rightArr[0])
@@ -44,4 +50,6 @@ const change = (str) => {
 const s = '12345.43'
 const s1 = '12345.1'
 const s2 = '12345'
-console.log(change(s2));
+console.log(s + ' => ' + change(s));
+console.log(s1 + '  => ' + change(s1));
+console.log(s2 + '    => ' + change(s2));
