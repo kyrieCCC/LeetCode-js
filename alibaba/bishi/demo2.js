@@ -8,7 +8,7 @@
  */
 const change = (str) => {
     const arr = str.split(".")
-
+    // return arr
     const leftArr = arr[0]
     const res = []
     let count = 0
@@ -44,4 +44,4 @@ const change = (str) => {
 const s = '12345.43'
 const s1 = '12345.1'
 const s2 = '12345'
-console.log(change(s1));
+console.log(change(s2));
