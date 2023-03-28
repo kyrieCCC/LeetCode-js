@@ -18,5 +18,5 @@ const finSub = (str) => {
     return res
 }
 
-const s = 'AAAAACCCCCAAAAACCCCCAAAAAGGGTTT'
+const s = 'AAAAACCCCCAAAAACCCCCAAAAAGGGTTT' 
 console.log(finSub(s));
