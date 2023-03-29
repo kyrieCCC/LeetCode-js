@@ -1,5 +1,6 @@
 //实现一个vue的eventbus
-//实质上就是一个发布订阅模式
+//实质上就是实现一个发布订阅模式
+
 class EventBus{
     constructor() {
         this.event = {
@@ -40,6 +41,7 @@ const test = (param) => {
     console.log(param);
 }
 
+//测试用例
 eventbus.on('print', test)
-console.log(eventbus.emit('print', 'hello world'))
+console.log(eventbus.emit('print', 'hello world')) //输出'hello world'
 
