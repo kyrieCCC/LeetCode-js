@@ -40,7 +40,7 @@ class eventEmitter {
             callback()
             this.off(type, func)
         }
-        this.on(type, func )
+        this.on(type, func)
     }
 }
 
