@@ -55,3 +55,7 @@ const dfs = (head1, head2, cur) => {
     t.next = dfs(head1 ? head1.next : null, head2 ? head2.next : null, cur)
     return t
 }
+
+//第二个解法就是第一个解法的进阶版，也就是递归的方式
+//确定递归的终止条件，以及每次需要计算的sum、cur等等，这些在第一个循环的解法中说明了
+//在每次递归的时候，都要将链表指向下一位
