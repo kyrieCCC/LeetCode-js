@@ -7,7 +7,7 @@
 // 返回5 -> 7 -> 9
 
 const listSum = (head1, head2) => {
-    const node = null, t = null
+    let node = null, t = null
     let cur = 0
     while (head1 || head2) {
         const item1 = head1 ? head1.val : 0
@@ -33,3 +33,6 @@ const listSum = (head1, head2) => {
     }
     return node
 }
+//使用了循环的解法
+//每次都会取到当前链表的值，并且进行相加，使用cur来保存进位
+//最后需要判断cur是否大于等于来判断是否需要多加一位
