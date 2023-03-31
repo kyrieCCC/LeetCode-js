@@ -36,3 +36,22 @@ const listSum = (head1, head2) => {
 //使用了循环的解法
 //每次都会取到当前链表的值，并且进行相加，使用cur来保存进位
 //最后需要判断cur是否大于等于来判断是否需要多加一位
+
+
+//面试官说你这个循环做出来了，不如用一下递归的方式吧
+const listSum2 = (head1, head2) => {
+    return dfs(head1, head2, 0)
+}
+
+const dfs = (head1, head2, cur) => {
+    if (!head1 && !head2 && cur === 0) {
+        return null
+    }
+    const item1 = head1 ? head1.val : 0
+    const item2 = head2 ? head2.val : 0
+    const sum = item1 + item2 + cur
+    const t = new ListNode(sum % 10)
+    cur = Math.floor(sum / 10)
+    t.next = dfs(head1 ? head1.next : null, head2 ? head2.next : null, cur)
+    return t
+}
