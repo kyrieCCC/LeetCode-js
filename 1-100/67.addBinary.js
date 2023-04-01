@@ -30,7 +30,17 @@ var addBinary = function (a, b) {
 //并且使用cur来记录这个时候的进位
 //最后得到的结果是逆序的，需要reverse来反转顺序
 
+//解法二，既然parseInt解决不了大数字的问题，直接引入bigInt
+const addBinary_plus = (a, b) => {
+    return (BigInt('0b' + a) + BigInt("0b" + b)).toString(2)
+}
+//使用bigInt来记录很长的数值
+//0b前缀代表二进制，使用bigInt转为十进制
+//最后将结果转为二进制即可
+
 const a = '11'
 const b = '1'
 const result = addBinary(a, b)
+const res2 = addBinary_plus(a, b)
 console.log(result)
+console.log(res2)
