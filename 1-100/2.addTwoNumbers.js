@@ -25,3 +25,8 @@ const dfs = (l1, l2, cur) => {
     t.next = dfs(l1? l1.next : null, l2 ? l2.next  : null, cur)
     return t
 }
+//本题使用的是递归的方式
+//美团实习二面算法题
+//可以直接使用循环的方法，依次遍历每一个链表的节点
+//使用sum来记录每一次加法得出的值，以及cur来记录进位
+//最后每次next的时候判断是否存在下一个值
