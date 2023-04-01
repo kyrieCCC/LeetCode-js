@@ -26,6 +26,9 @@ var addBinary = function (a, b) {
     res += cur ? cur : ""
     return res.split("").reverse().join("")
 }
+//正常的使用加法的方式，计算每一个数字相加大的结果
+//并且使用cur来记录这个时候的进位
+//最后得到的结果是逆序的，需要reverse来反转顺序
 
 const a = '11'
 const b = '1'
