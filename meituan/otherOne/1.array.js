@@ -40,6 +40,9 @@ const quickly = (arr) => {
     }
     return quickly(left).concat(midItem, quickly(right))
 }
+//快速排序的思想
+//结合分治算法中的递归进行解决
+
 
 const arr = [
         {name:'a',age:4},
