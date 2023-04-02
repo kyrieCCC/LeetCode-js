@@ -24,7 +24,8 @@ const myFun2 = (s) => {
         return $1.toUpperCase()
     })
 }
-
+//使用正则表达式针对字符串进行匹配
+//每次匹配到链子符的时候，就针对后面的字母为一组进行替换
 
 const s = 'this-is-string'
 const s1 = '-webkit-border-image'
