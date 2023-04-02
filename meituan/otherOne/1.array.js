@@ -22,6 +22,10 @@ const myFun = (arr) => {
     return arr
 }
 
+//使用冒泡排序的思想，实质上就是根据age的小大，来判断元素摆放的位置
+//冒泡排序时间复杂度nlogm
+//另外还可以使用快速排序的方式
+
 const arr = [
         {name:'a',age:4},
         {name:'b',age:6},
