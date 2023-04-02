@@ -17,6 +17,15 @@ const myFun = (s) => {
 }
 //暴力遍历每一个值，当遇到连字符的时候，将下一个数值变为大写
 
+//正则表达式
+const myFun2 = (s) => {
+    const reg = /-(\w)/g
+    return s.replace(reg, ($0, $1) => {
+        return $1.toUpperCase()
+    })
+}
+
 
 const s = 'this-is-string'
-console.log(myFun(s));
+const s1 = '-webkit-border-image'
+console.log(myFun2(s));
