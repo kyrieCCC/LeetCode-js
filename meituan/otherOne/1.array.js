@@ -9,7 +9,7 @@
 //   ]
 // 例如上面这个数组，根据其age重新排序
 
-
+//冒泡排序
 const myFun = (arr) => {
     const res = []
     for (let i = 0; i < arr.length; i++){
@@ -26,6 +26,21 @@ const myFun = (arr) => {
 //冒泡排序时间复杂度nlogm
 //另外还可以使用快速排序的方式
 
+
+//快速排序
+const quickly = (arr) => {
+    if (arr.length <= 1) {
+        return arr
+    }
+    const midIndex = Math.floor(arr.length / 2)
+    const midItem = arr.splice(midIndex, 1)[0]
+    const left = [], right = []
+    for (let i = 0; i < arr.length; i++){
+        arr[i].age > midItem.age ? right.push(arr[i]) : left.push(arr[i])
+    }
+    return quickly(left).concat(midItem, quickly(right))
+}
+
 const arr = [
         {name:'a',age:4},
         {name:'b',age:6},
@@ -36,3 +51,4 @@ const arr = [
 ]
 
 console.log(myFun(arr));
+console.log(quickly(arr))
