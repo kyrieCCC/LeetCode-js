@@ -33,3 +33,26 @@ var isSameTree = function (p, q) {
 //直接使用处理二叉树常用的递归的方式进行处理
 //用一段字符串来记录每个节点的值
 //最后判断两个字符串是否相等，从而判断是否为相同的树
+
+
+const isSameTree_1 = (p, q) => {
+    let flag = true
+    const dfs = (p, q) => {
+        if (!p && !q) {
+            return
+        }
+        if (p && q) {
+            if (p.val !== q.val) {
+                return flag = false
+            }
+            dfs(p.left, q.left)
+            dfs(p.right, q.right)
+        }
+        else {
+            return flag = false
+        }
+    }
+    dfs(p, q)
+    return flag
+}
+//击败95%
