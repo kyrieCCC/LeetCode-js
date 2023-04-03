@@ -29,4 +29,6 @@ const myFun2 = (s) => {
 
 const s = 'this-is-string'
 const s1 = '-webkit-border-image'
-console.log(myFun2(s));
+
+
+console.log(sChange);
