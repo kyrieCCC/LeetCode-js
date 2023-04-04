@@ -23,13 +23,24 @@ var multiply = function (num1, num2) {
     if (res[0] == 0) res.shift()
     return res.join('')
 };
+//击败57%
 //使用p1与p2来记录下标
 //后者代表当前元素的位置，前者代表进位
 //每次进行计算的时候都需要累加之前的数值
 //并且记录下一个位置上的进位
 //如果首位不是0，则将0排除出去
 
+
+
+//如果题目允许直接使用API，则可以直接调用BigInt
+const multiply_plus = (num1, num2) => {
+    return (BigInt(num1) * BigInt(num2)).toString()
+}
+//击败 96%
+
 const num1 = '5', num2 = '6'
 const num3 = '123', num4 = '456'
 console.log(multiply(num1, num2));
 console.log(multiply(num3, num4));
+console.log(multiply_plus(num1, num2));
+console.log(multiply_plus(num3, num4));
