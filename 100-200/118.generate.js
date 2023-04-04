@@ -17,6 +17,10 @@ var generate = function (numRows) {
     }
     return res
 }
+//击败96%
+//直接使用数学公式，将每一个推入主队列的数组的元素进行计算
+//计算公式为上一层的左边与中间的元素
+
 
 const numRows = 5
 console.log(generate(numRows));
