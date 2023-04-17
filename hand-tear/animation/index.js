@@ -1,4 +1,10 @@
-
+/**
+ * 动画函数
+ * @param {Number} duration 
+ * @param {Number} from 
+ * @param {Number} to 
+ * @param {Function} doFuntion 
+ */
 function animation(duration, from, to, doFuntion) {
     const dis = to - from
     const speed = dis / duration
