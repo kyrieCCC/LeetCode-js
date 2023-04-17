@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .btn {
+            width: 100px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 8px;
+            color: rgb(21, 21, 21);
+            border-color: aliceblue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label>价格: 2999.00</label>
+    <button class="btn">打折</button>
+
+    <script src="index.js"></script>
+    <script>
+        const label = document.querySelector('label')
+        const btn = document.querySelector('.btn')
+
+        btn.onclick = function(){
+            animation(1000, 2999, 299, (val) => {
+                label.textContent = `价格: ${val.toFixed(2)}`
+            })
+        }
+    </script>
+</body>
+</html>
