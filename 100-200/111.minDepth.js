@@ -5,6 +5,7 @@
 // 输入：root = [3,9,20,null,null,15,7]
 // 输出：2
 
+//解法一 DFS
 var minDepth = function (root) {
     if (!root) {
         return 0
@@ -21,4 +22,9 @@ var minDepth = function (root) {
         res = Math.min(minDepth(root.right), res)
     }
     return res + 1
- }
+}
+// 通过递归来遍历这个二叉树
+// 每当左右子树都没有值的时候，返回深度为1
+// 当左子树或者右子树存在的时候，进行递归，判断左右子树的深度
+// 由此往下，来比较左右子树的深度大小，取出小的值
+// 最后返回结果+1表示包括根节点
