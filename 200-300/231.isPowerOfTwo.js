@@ -28,9 +28,28 @@ var isPowerOfTwo = function (n) {
 //反之不是
 //需要注意的是处理n = 1的情况
 
+
+const isPowerOfTwo_1 = (n) => {
+    if (n == 1) {
+        return true
+    }
+    if (n < 2 && n != 1) {
+        return false
+    }
+    return isPowerOfTwo_1(n / 2)
+}
+
+
 const n = 1
 const n1 = 16
 const n2 = 5
 console.log(isPowerOfTwo(n));
 console.log(isPowerOfTwo(n1));
 console.log(isPowerOfTwo(n2));
+
+console.log("----------------------------");
+console.log(isPowerOfTwo_1(n));
+console.log(isPowerOfTwo_1(n1));
+console.log(isPowerOfTwo_1(n2));
+
+
