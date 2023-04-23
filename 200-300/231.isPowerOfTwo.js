@@ -42,6 +42,12 @@ const isPowerOfTwo_1 = (n) => {
 //既然是暴力循环，我们就可以转换为递归进行求解
 //以上为递归解法，其中的终止条件就是n < 2 的时候根据不同情况判断是否为2的幂
 
+const isPowerOfTwo_plus = (n) => {
+    return n > 0 && (n & (n - 1)) === 0
+}
+//击败90%
+//使用位运算，巧妙地判断是否为2的幂
+
 const n = 1
 const n1 = 16
 const n2 = 5
@@ -53,5 +59,10 @@ console.log("----------------------------");
 console.log(isPowerOfTwo_1(n));
 console.log(isPowerOfTwo_1(n1));
 console.log(isPowerOfTwo_1(n2));
+
+console.log("----------------------------");
+console.log(isPowerOfTwo_plus(n));
+console.log(isPowerOfTwo_plus(n1));
+console.log(isPowerOfTwo_plus(n2));
 
 
