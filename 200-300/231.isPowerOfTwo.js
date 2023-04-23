@@ -22,6 +22,11 @@ var isPowerOfTwo = function (n) {
     }
     return false
 }
+//本题的解法直接使用简单粗暴的循环法
+//通过不断累计val的平方，再来与n比较
+//若与n相等则说明为2的幂
+//反之不是
+//需要注意的是处理n = 1的情况
 
 const n = 1
 const n1 = 16
