@@ -31,6 +31,9 @@ const isPowerOfThree1 = (n) => {
     }
     return isPowerOfThree1(n / 3)
 }
+//与循环类似，使用递归的方法进行计算
+//递归的方法首先需要确定终止条件与下一个值的判断
+//两个if语句判断目标值是否符合3的幂的条件
 
 const a1 = 5, a2 = 9, a3 = 27
 console.log(isPowerOfThree(a1));
