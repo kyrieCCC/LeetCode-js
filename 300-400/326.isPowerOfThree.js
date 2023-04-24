@@ -17,6 +17,10 @@ var isPowerOfThree = function (n) {
     }
     return false
 }
+//直接暴力循环解决，通过while不停累计val的值
+//val的值始终是3的倍数
+//最后判断val与n是否相等
+
 
 const a1 = 5, a2 = 9, a3 = 27
 console.log(isPowerOfThree(a1));
