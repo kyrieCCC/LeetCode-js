@@ -22,7 +22,21 @@ var isPowerOfThree = function (n) {
 //最后判断val与n是否相等
 
 
+const isPowerOfThree1 = (n) => {
+    if (n == 1) {
+        return true
+    }
+    if (n < 3 && n != 1) {
+        return false
+    }
+    return isPowerOfThree1(n / 3)
+}
+
 const a1 = 5, a2 = 9, a3 = 27
 console.log(isPowerOfThree(a1));
 console.log(isPowerOfThree(a2));
 console.log(isPowerOfThree(a3));
+console.log('----------------------------------');
+console.log(isPowerOfThree1(a1));
+console.log(isPowerOfThree1(a2));
+console.log(isPowerOfThree1(a3));
