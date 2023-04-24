@@ -35,6 +35,13 @@ const isPowerOfThree1 = (n) => {
 //递归的方法首先需要确定终止条件与下一个值的判断
 //两个if语句判断目标值是否符合3的幂的条件
 
+const isPowerOfThree2 = (n) => {
+    while (n !== 0 && n % 3 == 0) {
+        n = Math.floor(n / 3)
+    }
+    return n === 1
+}
+
 const a1 = 5, a2 = 9, a3 = 27
 console.log(isPowerOfThree(a1));
 console.log(isPowerOfThree(a2));
