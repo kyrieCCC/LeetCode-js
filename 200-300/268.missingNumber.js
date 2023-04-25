@@ -44,6 +44,16 @@ const missingNumber_map = (nums) => {
 //再来一个循环判断下标的值是否存在，不存在则说明没有对应数字
 //返回这个数字
 
+const missingNumber_math = (nums) => {
+    const len = nums.length
+    const totalSum = (len * (len + 1)) / 2
+    let numsSum = 0
+    for (let i = 0; i < len; i++){
+        numsSum += nums[i]
+    }
+    return totalSum - numsSum
+}
+
 
 const nums1 = [3, 0, 1]
 const nums2 = [0, 1]
@@ -55,4 +65,8 @@ console.log(missingNumber(nums3));
 console.log('```````````````````````````````````````');
 console.log(missingNumber_map(nums1));
 console.log(missingNumber_map(nums2));
-console.log(missingNumber_map(nums3));
+console.log(missingNumber_map(nums3)); 
+console.log('```````````````````````````````````````');
+console.log(missingNumber_math(nums1));
+console.log(missingNumber_math(nums2));
+console.log(missingNumber_math(nums3));
