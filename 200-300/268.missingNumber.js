@@ -24,6 +24,20 @@ var missingNumber = function (nums) {
 //如果不对应则说明缺少了这个地方的数字
 //如果循环数值没出现，则直接返回长度，表示末尾缺了这个数字
 
+const missingNumber_map = (nums) => {
+    const map = new Map()
+    for (let index = 0; index < nums.length; index++) {
+        map.set(nums[index], 1)
+    }
+
+    let tag = -1
+    for (let i = 0; i <= nums.length; i++){
+        if (!map.has(i)) {
+            tag = i
+            return tag
+        }
+    }
+}
 
 const nums1 = [3, 0, 1]
 const nums2 = [0, 1]
@@ -32,3 +46,7 @@ const nums3 = [9, 6, 4, 2, 3, 5, 7, 0, 1]
 console.log(missingNumber(nums1));
 console.log(missingNumber(nums2));
 console.log(missingNumber(nums3));
+console.log('```````````````````````````````````````');
+console.log(missingNumber_map(nums1));
+console.log(missingNumber_map(nums2));
+console.log(missingNumber_map(nums3));
