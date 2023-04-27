@@ -31,6 +31,15 @@ const isPowerOfFour_deep = (n) => {
     }
     return isPowerOfFour_deep(n / 4)
 }
+//递归的解法，与前面类似
+//递归的解法代码更加简洁
+
+const isPowerOfFour_plus = (n) => {
+    return n > 0 && (n & (n - 1)) == 0 && n % 3 == 1
+}
+//直接通过取模运算
+//计算n % 3 的模，只有4的幂计算出来的结果为1
+//前面两个条件为去除特殊值
 
 const a1 = 1
 const a2 = 5
@@ -44,3 +53,9 @@ console.log('------------------------------');
 console.log(isPowerOfFour_deep(a1));
 console.log(isPowerOfFour_deep(a2));
 console.log(isPowerOfFour_deep(a3));
+
+
+console.log('------------------------------');
+console.log(isPowerOfFour_plus(a1));
+console.log(isPowerOfFour_plus(a2));
+console.log(isPowerOfFour_plus(a3));
