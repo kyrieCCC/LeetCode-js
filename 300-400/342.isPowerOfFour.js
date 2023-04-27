@@ -21,6 +21,17 @@ var isPowerOfFour = function (n) {
 //通过不断累计val的值来判断与n的关系，从而得出n是否为4的幂
 //需要注意处理n=1的情况
 
+
+const isPowerOfFour_deep = (n) => {
+    if (n == 1) {
+        return true
+    }
+    if (n < 4 && n != 1) {
+        return false
+    }
+    return isPowerOfFour_deep(n / 4)
+}
+
 const a1 = 1
 const a2 = 5
 const a3 = 64
@@ -28,3 +39,8 @@ const a3 = 64
 console.log(isPowerOfFour(a1));
 console.log(isPowerOfFour(a2));
 console.log(isPowerOfFour(a3));
+
+console.log('------------------------------');
+console.log(isPowerOfFour_deep(a1));
+console.log(isPowerOfFour_deep(a2));
+console.log(isPowerOfFour_deep(a3));
