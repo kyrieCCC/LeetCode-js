@@ -17,6 +17,9 @@ var isPowerOfFour = function (n) {
     }
     return false
 }
+//暴力循环，但这并不是最优解法
+//通过不断累计val的值来判断与n的关系，从而得出n是否为4的幂
+//需要注意处理n=1的情况
 
 const a1 = 1
 const a2 = 5
