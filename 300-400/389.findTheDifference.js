@@ -30,7 +30,10 @@ var findTheDifference = function (s, t) {
         }
     }
 }
-
+//直接使用哈希表的方式
+//使用哈希表记录s当中的所有字符以及出现的次数
+//在t中进行遍历，t中的每一个字符是否为出现次数为0或者是多出来的字符
+//返回这个指定的字符
 
 const s1 = "abcd", t1 = "abcde"
 const s2 = "", t2 = "y"
