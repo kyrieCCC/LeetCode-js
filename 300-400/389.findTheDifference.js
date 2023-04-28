@@ -35,8 +35,27 @@ var findTheDifference = function (s, t) {
 //在t中进行遍历，t中的每一个字符是否为出现次数为0或者是多出来的字符
 //返回这个指定的字符
 
+
+const findTheDifference_sum = (s, t) => {
+    let a1 = 0, a2 = 0
+    for (let i = 0; i < s.length; i++){
+        a1 += s[i].charCodeAt()
+    }
+
+    for (let i = 0; i < t.length; i++){
+        a2 += t[i].charCodeAt()
+    }
+
+    return String.fromCharCode(a2 - a1)
+}
+
 const s1 = "abcd", t1 = "abcde"
 const s2 = "", t2 = "y"
 
 console.log(findTheDifference(s1, t1));
 console.log(findTheDifference(s2, t2));
+
+
+console.log('-------------------------------');
+console.log(findTheDifference_sum(s1, t1));
+console.log(findTheDifference_sum(s2, t2));
