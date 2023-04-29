@@ -18,6 +18,7 @@ var reverseString = function (s) {
 };
 //直接使用循环的方式
 //使用两个指针，一个指向前面一个指向后面
+//然后交换两个指针的数值
 
 const s = ["h", "e", "l", "l", "o"]
 const s1 = ["H", "a", "n", "n", "a", "h"]
