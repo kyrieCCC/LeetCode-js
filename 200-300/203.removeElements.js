@@ -17,3 +17,8 @@ var removeElements = function (head, val) {
     }
     return newNode.next
 }
+//击败96%
+//使用了循环的思想
+//首先进行循环遍历每一个元素，每当找到一个指定的元素的时候，就跳过
+//即将next指向next.next
+//最后返回操作完整的链表
