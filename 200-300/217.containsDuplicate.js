@@ -15,6 +15,9 @@ var containsDuplicate = function (nums) {
     }
     return false
 }
+//遇到计数的问题，直接无脑上map
+//本题使用map来进行计数，记录每一个数值出现的次数
+//当遇到次数为2的时候返回true
 
 const nums = [1, 2, 3, 4]
 console.log(containsDuplicate(nums));
