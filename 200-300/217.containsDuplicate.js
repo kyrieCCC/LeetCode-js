@@ -30,6 +30,9 @@ const containsDuplicate_low = (nums) => {
     }
     return false
 }
+//使用排序
+//如果排序后数组出现连续两个数字相同说明不符合条件
+//我们在排序后遍历数组即可
 
 const nums = [1, 2, 3, 1]
 console.log(containsDuplicate(nums));
