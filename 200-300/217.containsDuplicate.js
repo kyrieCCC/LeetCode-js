@@ -19,5 +19,18 @@ var containsDuplicate = function (nums) {
 //本题使用map来进行计数，记录每一个数值出现的次数
 //当遇到次数为2的时候返回true
 
-const nums = [1, 2, 3, 4]
+
+const containsDuplicate_low = (nums) => {
+    nums = nums.sort((a, b) => a - b)
+
+    for (let i = 0; i < nums.length - 1; i++) { 
+        if (nums[i] == nums[i + 1]) {
+            return true
+        }
+    }
+    return false
+}
+
+const nums = [1, 2, 3, 1]
 console.log(containsDuplicate(nums));
+console.log(containsDuplicate_low(nums));
