@@ -4,6 +4,7 @@
 // 输出：[1,2,3,4,5]
 
 var removeElements = function (head, val) { 
+    //创建一个新的链表用于指向head
     let newNode = new ListNode(0)
     newNode.next = head
     let node = newNode
