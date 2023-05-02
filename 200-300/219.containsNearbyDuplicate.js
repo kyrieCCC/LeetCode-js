@@ -22,6 +22,9 @@ var containsNearbyDuplicate = function (nums, k) {
     }
     return false
 }
+//使用哈希表记录每一个数值以及对应的下标
+//随后每次都遍历的时候都会判断是否重复出现以及abs相减是否小于等于k
+//如果没有返回false
 
 const nums1 = [1, 2, 3, 1], k1 = 3
 const nums2 = [1, 2, 3, 1, 2, 3], k2 = 2
