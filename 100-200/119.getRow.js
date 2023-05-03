@@ -21,6 +21,11 @@ var getRow = function (rowIndex) {
     }
     return res[rowIndex]
 }
+//直接使用递推的方式
+//首先创建一个数组用于存储计算的结果
+//再使用地推的方式计算出每一个对应位置的值
+//每一行的值都存在数组当中
+//直接返回对应行的结果即可
 
 const rowIndex1 = 3
 const rowIndex2 = 1
