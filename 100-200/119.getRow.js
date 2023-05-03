@@ -38,6 +38,10 @@ const getRow_plus = (rowIndex) => {
     }
     return res
 }
+//这是针对第一种解法的进一步优化
+//我们可以观察到每当计算新的值的时候，总是与j - 1以及i有关
+//于是我们创建以上的等式用于计算
+//最后返回递推出的结果即可
 
 const rowIndex1 = 3
 const rowIndex2 = 1
