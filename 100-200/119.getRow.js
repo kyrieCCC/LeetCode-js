@@ -27,7 +27,22 @@ var getRow = function (rowIndex) {
 //每一行的值都存在数组当中
 //直接返回对应行的结果即可
 
+
+const getRow_plus = (rowIndex) => {
+    const res = new Array(rowIndex + 1).fill(0)
+    res[0] = 1
+    for (let i = 1; i <= rowIndex; i++){
+        for (let j = i; j > 0; j--){
+            res[j] += res[j - 1]
+        }
+    }
+    return res
+}
+
 const rowIndex1 = 3
 const rowIndex2 = 1
 console.log(getRow(rowIndex1));
 console.log(getRow(rowIndex2));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(getRow_plus(rowIndex1));
+console.log(getRow_plus(rowIndex2));
