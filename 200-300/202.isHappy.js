@@ -19,5 +19,16 @@
  * @return {boolean}
  */
 var isHappy = function (n) { 
+    let slow = n
+    let fast = getNext(n) 
 
+    while (fast !== slow && fast !== 1) {
+        fast = getNext(getNext(fast))
+        slow = getNext(slow)
+    }
+    return fast == 1
+}
+
+const getNext = (n) => {
+    return n.toString().split("").map(item => item ** 2).reduce((a, b) => a + b)
 }
