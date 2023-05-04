@@ -42,3 +42,6 @@ var hasPathSum = function (root, targetSum) {
     }
     return dfs(root, targetSum - root.val)
 }
+//递归解法
+//遍历每一条路径，找出符合target目标的一条路径
+//只有当current为0的时候才能符合target的规则
