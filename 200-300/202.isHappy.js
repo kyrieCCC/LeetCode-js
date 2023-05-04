@@ -28,7 +28,14 @@ var isHappy = function (n) {
     }
     return fast == 1
 }
+//使用快慢指针的解法
+//当快慢指针相遇的时候，说明存在环
+//这样表明当前数字并非快乐数
+//反之当快指针为1的时候就是找到了答案，此数为快乐数
 
+
+//辅助函数
+//用于判断下一个数
 const getNext = (n) => {
     return n.toString().split("").map(item => item ** 2).reduce((a, b) => a + b)
 }
