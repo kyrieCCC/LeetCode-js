@@ -40,6 +40,11 @@ var isPalindrome = function (s) {
 
     return true
 }
+//首先先将字符串中的全部内容转换为小写形式
+//随后使用正则表达式来判断是否为字母或者是数字
+//将过滤后的结果拿出来
+//最后使用两个指针，一个在前一个在后来滑动判断是否为回文串
+
 
 const s1 = "A man, a plan, a canal: Panama"
 const s2 = "race a car"
