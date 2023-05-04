@@ -16,5 +16,35 @@
  * @return {boolean}
  */
 var isPalindrome = function (s) { 
+    s = s.toLowerCase()
+    const reg1 = /[0-9]/, reg2 = /[a-z]/
+    const arr = []
 
+    for (let i = 0; i < s.length; i++){
+        if (reg1.test(s[i])) {
+            arr.push(s[i])
+        }
+        else if (reg2.test(s[i])) {
+            arr.push(s[i])
+        }
+    }
+
+    let left = 0, right = arr.length - 1
+    while (left <= right) {
+        if (arr[left] != arr[right]) {
+            return false
+        }
+        left++
+        right--
+    }
+
+    return true
 }
+
+const s1 = "A man, a plan, a canal: Panama"
+const s2 = "race a car"
+const s3 = " "
+
+console.log(isPalindrome(s1));
+console.log(isPalindrome(s2));
+console.log(isPalindrome(s3));
