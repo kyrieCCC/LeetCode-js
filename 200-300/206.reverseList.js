@@ -14,7 +14,7 @@ var reverseList = function (head) {
     }
     return pre
 };
-//双指针操作，滑动改变指针的指向、
+//双指针操作，滑动改变指针的指向
 //2023-03-04更新，腾讯春招备战
 
 const head = [1, 2, 3, 4, 5]
