@@ -30,7 +30,8 @@ const robRange = (nums, start, end) => {
     return second
 }
 
-//击败80% 字节跳动
+//击败80% 
+//字节跳动春招练习
 
 const nums = [1, 2, 3, 1]
 console.log(rob(nums));
