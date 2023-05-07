@@ -35,6 +35,10 @@ var intersection = function (nums1, nums2) {
     }
     return res2 
 }
+//直接使用map来查看两个数组的重合的部分
+//再用一个map来给结果数组去重
+//得出唯一的值
+//最后以数组的形式输出
 
 const nums1 = [1, 2, 2, 1], nums2 = [2, 2]
 console.log(intersection(nums1, nums2));
