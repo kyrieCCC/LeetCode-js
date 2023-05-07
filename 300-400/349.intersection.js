@@ -40,5 +40,33 @@ var intersection = function (nums1, nums2) {
 //得出唯一的值
 //最后以数组的形式输出
 
+const intersection_ans = (nums1, nums2) => {
+    nums1 = nums1.sort((a, b) => a - b)
+    nums2 = nums2.sort((a, b) => a - b)
+
+    let length1 = nums1.length, length2 = nums2.length
+    let index1 = 0, index2 = 0
+    const res = []
+
+    while(index1 < length1 && index2 < length2){
+        const item1 = nums1[index1], item2 = nums2[index2]
+        if(item1 == item2){
+            if(!res.length || item1 !== res[res.length - 1]){
+                res.push(item1)
+            }
+            index1++
+            index2++
+        }
+        else if(item1 < item2){
+            index1++
+        }
+        else{
+            index2++
+        }
+    }
+    return res
+}
+
 const nums1 = [1, 2, 2, 1], nums2 = [2, 2]
-console.log(intersection(nums1, nums2));
+console.log(intersection(nums1, nums2)); 
+console.log(intersection_ans(nums1, nums2));
