@@ -66,6 +66,11 @@ const intersection_ans = (nums1, nums2) => {
     }
     return res
 }
+//使用排序 + 双指针的方式
+//首先对数组进行排序，再用两个指针分别指向两个数组的开端
+//然后不断变换指针的位置++
+//判断元素是否相等，如果相等，判断是否res中存在这个值
+//最后返回res
 
 const nums1 = [1, 2, 2, 1], nums2 = [2, 2]
 console.log(intersection(nums1, nums2)); 
