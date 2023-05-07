@@ -41,6 +41,7 @@ var intersection = function (nums1, nums2) {
 //最后以数组的形式输出
 
 const intersection_ans = (nums1, nums2) => {
+    //排序
     nums1 = nums1.sort((a, b) => a - b)
     nums2 = nums2.sort((a, b) => a - b)
 
@@ -48,9 +49,11 @@ const intersection_ans = (nums1, nums2) => {
     let index1 = 0, index2 = 0
     const res = []
 
+    //双指针移动判断
     while(index1 < length1 && index2 < length2){
         const item1 = nums1[index1], item2 = nums2[index2]
-        if(item1 == item2){
+        if (item1 == item2) {
+            //符合push条件
             if(!res.length || item1 !== res[res.length - 1]){
                 res.push(item1)
             }
