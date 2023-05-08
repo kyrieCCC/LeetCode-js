@@ -3,10 +3,9 @@
 // 输入：[3, 2, 1]
 // 输出：1
 // 解释：第三大的数是 1 。
-
-// 输入：[3, 2, 1]
-// 输出：1
-// 解释：第三大的数是 1 。
+// 输入：[1, 2]
+// 输出：2
+// 解释：第三大的数不存在, 所以返回最大的数 2 
 
 
 /**
@@ -18,8 +17,16 @@ var thirdMax = function(nums) {
     set = [...new Set(nums)]
 
     if(set.length >= 3){
-        return set[set.length - 4]
+        return set[set.length - 3]
     } else {
         return set[set.length - 1]
     }
 };
+
+const nums1 = [2, 3, 1]
+const nums2 = [2, 1]
+const nums3 = [1, 2, 2, 3]
+
+console.log(thirdMax(nums1));
+console.log(thirdMax(nums2));
+console.log(thirdMax(nums3));
