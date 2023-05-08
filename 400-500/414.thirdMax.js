@@ -22,11 +22,23 @@ var thirdMax = function(nums) {
         return set[set.length - 1]
     }
 };
-//使用set
+//使用set，95%
 //首先针对目标数组进行排序
 //随后将排序后的数组进行去重
 //在判断长度是否大于或者等于3
 //大于等于3则返回第三大，反之返回最大
+
+const thirdMax_sort = (nums) => {
+    nums = nums.sort((a, b) => a - b) 
+    nums.reverse()
+
+    for (let i = 1, diff = 1; i < nums.length; i++){
+        if (nums[i] != nums[i - 1] && ++diff == 3) {
+            return nums[i]
+        }
+    }
+    return nums[0]
+}
 
 const nums1 = [2, 3, 1]
 const nums2 = [2, 1]
@@ -34,4 +46,10 @@ const nums3 = [1, 2, 2, 3]
 
 console.log(thirdMax(nums1));
 console.log(thirdMax(nums2));
-console.log(thirdMax(nums3));
+console.log(thirdMax(nums3)); 
+
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=');
+
+console.log(thirdMax_sort(nums1));
+console.log(thirdMax_sort(nums2));
+console.log(thirdMax_sort(nums3));
