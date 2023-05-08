@@ -22,6 +22,11 @@ var thirdMax = function(nums) {
         return set[set.length - 1]
     }
 };
+//使用set
+//首先针对目标数组进行排序
+//随后将排序后的数组进行去重
+//在判断长度是否大于或者等于3
+//大于等于3则返回第三大，反之返回最大
 
 const nums1 = [2, 3, 1]
 const nums2 = [2, 1]
