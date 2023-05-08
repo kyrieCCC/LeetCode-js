@@ -39,6 +39,10 @@ const thirdMax_sort = (nums) => {
     }
     return nums[0]
 }
+//直接使用排序的方式
+//通过排序后进行遍历
+//使用diff来判断元素是否为第三个最大的数值
+//并且判断是否两两相等
 
 const nums1 = [2, 3, 1]
 const nums2 = [2, 1]
