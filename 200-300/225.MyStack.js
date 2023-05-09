@@ -21,6 +21,7 @@ var MyStack = function() {
 };
 
 /** 
+ * push操作
  * @param {number} x
  * @return {void}
  */
@@ -30,6 +31,7 @@ MyStack.prototype.push = function (x) {
 };
 
 /**
+ * pop操作
  * @return {number}
  */
 MyStack.prototype.pop = function () {
@@ -43,10 +45,12 @@ MyStack.prototype.pop = function () {
     while(this._queue.length) {
         this.queue.push(this._queue.shift())
     }
+    //返回首位元素
     return ans
 };
 
 /**
+ * 取出首位元素
  * @return {number}
  */
 MyStack.prototype.top = function () {
@@ -55,6 +59,7 @@ MyStack.prototype.top = function () {
 };
 
 /**
+ * 判断是否为空
  * @return {boolean}
  */
 MyStack.prototype.empty = function () {
