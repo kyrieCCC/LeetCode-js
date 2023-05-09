@@ -14,6 +14,7 @@
 // 输出：
 // [null, null, null, 2, 2, false]
 
+//创建一个主队列与一个辅助队列
 var MyStack = function() {
     this.queue = []
     this._queue = []
@@ -23,18 +24,22 @@ var MyStack = function() {
  * @param {number} x
  * @return {void}
  */
-MyStack.prototype.push = function(x) {
+MyStack.prototype.push = function (x) {
+    //正常的push操作
     this.queue.push(x)
 };
 
 /**
  * @return {number}
  */
-MyStack.prototype.pop = function() {
+MyStack.prototype.pop = function () {
+    //将主队列中的全部非首位元素都放到辅助队列当中
     while(this.queue.length > 1) {
         this._queue.push(this.queue.shift())
     }
+    //取出首位元素
     const ans = this.queue.shift()
+    //将其他元素放回主队列
     while(this._queue.length) {
         this.queue.push(this._queue.shift())
     }
@@ -44,14 +49,16 @@ MyStack.prototype.pop = function() {
 /**
  * @return {number}
  */
-MyStack.prototype.top = function() {
+MyStack.prototype.top = function () {
+    //取出第一个元素
     return this.queue.slice(-1)[0]
 };
 
 /**
  * @return {boolean}
  */
-MyStack.prototype.empty = function() {
+MyStack.prototype.empty = function () {
+    //通过长度判断是否为空
     return !this.queue.length
 };
 
