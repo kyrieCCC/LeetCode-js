@@ -26,9 +26,8 @@
 // minStack.getMin();   --> 返回 -2.
 
 
-
-
-var MinStack = function() {
+var MinStack = function () {
+    //创建一个辅助栈
     this.stack = []
     this._stack = Infinity
 };
@@ -39,13 +38,15 @@ var MinStack = function() {
  */
 MinStack.prototype.push = function(val) {
     this.stack.push(val)
+    //每次 push 进辅助栈的都要保证为当前栈的最小值
     this._stack.push(Math.min(this._stack[this._stack.length - 1], val))
 };
 
 /**
  * @return {void}
  */
-MinStack.prototype.pop = function() {
+MinStack.prototype.pop = function () {
+    //两个栈同时弹出元素
     this.stack.pop()
     this._stack.pop()
 };
@@ -53,14 +54,17 @@ MinStack.prototype.pop = function() {
 /**
  * @return {number}
  */
-MinStack.prototype.top = function() {
+MinStack.prototype.top = function () {
+    //返回首位元素
     return this.stack[this.stack.length - 1]
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.getMin = function() {
+MinStack.prototype.getMin = function () {
+    //返回辅助栈的首位元素
+    //此时的首位元素就是当前栈的最小值
     return this._stack[this._stack.length - 1]
 };
 
