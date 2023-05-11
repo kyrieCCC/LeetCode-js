@@ -18,6 +18,10 @@ var fib = function (n) {
     }
     return fib(n - 1) + fib(n - 2)
 }
+//解决斐波那契数列最简单的递归方法
+//设置递归的终止条件为n < 2
+//每次返回的都是前两项的和
+
 
 const n1 = 2
 const n2 = 4
