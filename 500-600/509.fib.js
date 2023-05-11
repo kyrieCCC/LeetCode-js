@@ -23,7 +23,25 @@ var fib = function (n) {
 //每次返回的都是前两项的和
 
 
+const fib_dp = (n) => {
+    if (n < 2) {
+        return n 
+    }
+    let q = 0, p = 0, r = 1
+    for (let i = 2; i <= n; i++){
+        q = p
+        p = r
+        r = p + q
+    }
+    return r
+}
+
 const n1 = 2
 const n2 = 4
 console.log(fib(n1));
 console.log(fib(n2));
+
+console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+console.log(fib_dp(n1));
+console.log(fib_dp(n2));
