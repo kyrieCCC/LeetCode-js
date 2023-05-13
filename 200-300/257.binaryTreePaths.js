@@ -18,5 +18,19 @@
  * @return {string[]}
  */
 var binaryTreePaths = function (root) { 
-    
+    const res = []
+    const find_res = (root, path) => {
+        if (root) {
+            path += root.val.toString()
+            if (!root.left && !root.right) {
+                res.push(path)
+            } else {
+                path += "->"
+                find_res(root.left, path)
+                find_res(root.right, path)
+            }
+        }
+    }
+    find_res(root, "")
+    return res
 }
