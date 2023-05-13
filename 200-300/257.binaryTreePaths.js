@@ -14,6 +14,7 @@
  * }
  */
 /**
+ * 深度
  * @param {TreeNode} root
  * @return {string[]}
  */
@@ -40,6 +41,8 @@ var binaryTreePaths = function (root) {
 //最后每次向res中push一个完整的路径
 //返回res
 
+
+//广度
 const binaryTreePaths_bfs = (root) => {
     const res = []
     if (!root) {
