@@ -34,3 +34,8 @@ var binaryTreePaths = function (root) {
     find_res(root, "")
     return res
 }
+
+//直接递归遍历
+//每次都判断该节点是否存在叶子节点，若存在叶子节点就继续往下
+//最后每次向res中push一个完整的路径
+//返回res
