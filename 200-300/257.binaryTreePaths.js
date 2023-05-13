@@ -39,3 +39,28 @@ var binaryTreePaths = function (root) {
 //每次都判断该节点是否存在叶子节点，若存在叶子节点就继续往下
 //最后每次向res中push一个完整的路径
 //返回res
+
+const binaryTreePaths_bfs = (root) => {
+    const res = []
+    if (!root) {
+        return res
+    }
+    const nodeArr = [root]
+    const pathArr = [root.val.toString()]
+    while (nodeArr.length) {
+        const node = nodeArr.shift()
+        const path = pathArr.shift()
+        if (!node.left && !node.right) {
+            res.push(path)
+        }
+        if (node.left) {
+            nodeArr.push(node.left)
+            pathArr.push(path + "->" + node.left.val.toString())
+        }
+        if (node.right) {
+            nodeArr.push(node.right)
+            pathArr.push(path + "->" + node.right.val.toString())
+        }
+    }
+    return res
+}
