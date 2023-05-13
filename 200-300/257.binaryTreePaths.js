@@ -64,3 +64,7 @@ const binaryTreePaths_bfs = (root) => {
     }
     return res
 }
+//广度优先遍历
+//首先拿到每一层的节点值，针对每一层的节点值进行广度优先搜索
+//将路径放到res数组当中
+//返回res
