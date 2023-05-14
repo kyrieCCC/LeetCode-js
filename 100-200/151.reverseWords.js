@@ -20,4 +20,15 @@
  */
 var reverseWords = function(s) {
     s = s.trim()
+    const arr = s.split(" ").filter(item => item !== '')
+    arr.reverse()
+    const res = arr.join(" ")
+    return res
 };
+
+const s1 = "the sky is blue"
+const s2 = "a good   example"
+const s3 = "  hello world  "
+console.log(reverseWords(s1));
+console.log(reverseWords(s2));
+console.log(reverseWords(s3));
