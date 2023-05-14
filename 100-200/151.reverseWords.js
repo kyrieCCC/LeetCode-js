@@ -30,6 +30,8 @@ var reverseWords = function(s) {
 //去除当中的非字符部分
 //反转后输出为字符串
 
+//很感慨这是一个轻松搞定的题目
+
 const s1 = "the sky is blue"
 const s2 = "a good   example"
 const s3 = "  hello world  "
