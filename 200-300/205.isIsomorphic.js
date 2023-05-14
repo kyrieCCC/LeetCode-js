@@ -18,7 +18,7 @@ var isIsomorphic = function (s, t) {
     const len = s.length
     for (let i = 0; i < len; i++) {
         const x = s[i], y = t[i]
-        if ((s2t[x] && s2t[x] !== y) && (t2s[y] && t2s[y] !== x)) {
+        if ((s2t[x] && s2t[x] !== y) || (t2s[y] && t2s[y] !== x)) {
             return false
         }
         s2t[x] = y
@@ -26,3 +26,9 @@ var isIsomorphic = function (s, t) {
     }
     return true
 }
+
+
+const s1 = "egg", t1 = "add"
+const s2 = "foo", t2 = "bar"
+console.log(isIsomorphic(s1, t1));
+console.log(isIsomorphic(s2, t2));
