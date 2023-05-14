@@ -41,6 +41,10 @@ const isIsomorphic_index = (s, t) => {
     }
     return true
 }
+//直接使用索
+//记录每一个s和t里面的字符的映射关系，即indexOf的索引
+//如果索引不一致则说明不同
+//那么直接返回false
 
 
 const s1 = "egg", t1 = "add"
