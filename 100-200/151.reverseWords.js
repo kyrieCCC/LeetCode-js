@@ -25,6 +25,10 @@ var reverseWords = function(s) {
     const res = arr.join(" ")
     return res
 };
+//使用trim来去除首尾的空格
+//然后根据空格来划分单词
+//去除当中的非字符部分
+//反转后输出为字符串
 
 const s1 = "the sky is blue"
 const s2 = "a good   example"
