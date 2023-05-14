@@ -32,7 +32,23 @@ var isIsomorphic = function (s, t) {
 //一旦出现不同直接返回false
 
 
+//解法二 索引
+const isIsomorphic_index = (s, t) => {
+    for (let i = 0; i < s.length; i++){
+        if (s.indexOf(s[i]) !== t.indexOf(t[i])) {
+            return false
+        }
+    }
+    return true
+}
+
+
 const s1 = "egg", t1 = "add"
 const s2 = "foo", t2 = "bar"
 console.log(isIsomorphic(s1, t1));
 console.log(isIsomorphic(s2, t2));
+
+console.log("-=-=-=--=-=-=-=--=-=-=-=-=-=-=-=-=");
+
+console.log(isIsomorphic_index(s1, t1));
+console.log(isIsomorphic_index(s2, t2));
