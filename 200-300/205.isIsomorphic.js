@@ -26,6 +26,10 @@ var isIsomorphic = function (s, t) {
     }
     return true
 }
+//直接使用哈希表映射
+//记录每一个数字的映射的对应字母
+//每次针对s和t进行同步的检查，查看是否具有相同结构
+//一旦出现不同直接返回false
 
 
 const s1 = "egg", t1 = "add"
