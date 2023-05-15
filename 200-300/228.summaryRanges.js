@@ -38,6 +38,10 @@ var summaryRanges = function (nums) {
     }
     return res
 }
+//使用双指针，一个指向前端的开始的元素
+//另一个指向连续区间的最后一个位置
+//每次都针对区间中的内容取出前后两个指针放入res结果数组中
+//遍历nums得到对应res并返回
 
 
 const nums1 = [0, 1, 2, 4, 5, 7]
