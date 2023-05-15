@@ -34,7 +34,13 @@ var summaryRanges = function (nums) {
             part.push("->")
             part.push("" + nums[right])
         }
-        res.push(part)
+        res.push(part.join(""))
     }
     return res
 }
+
+
+const nums1 = [0, 1, 2, 4, 5, 7]
+const nums2 = [0, 2, 3, 4, 6, 8, 9]
+console.log(summaryRanges(nums1));
+console.log(summaryRanges(nums2));
