@@ -38,3 +38,8 @@ NumArray.prototype.sumRange = function (left, right) {
     }
     return sum
 };
+
+const numArray = new NumArray([-2, 0, 3, -5, 2, -1])
+console.log(numArray.sumRange(0, 2)); // return 1 ((-2) + 0 + 3)
+console.log(numArray.sumRange(2, 5)); // return -1 (3 + (-5) + 2 + (-1))
+console.log(numArray.sumRange(0, 5)); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))
