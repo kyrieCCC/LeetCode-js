@@ -38,6 +38,31 @@ NumArray.prototype.sumRange = function (left, right) {
     }
     return sum
 };
+//计算并累加sum，sum累加的范围为指定的left和right区域中的内容
+
+
+
+
+/**
+ * 解法二 前缀和
+ * @param {number[]} nums
+ */
+var NumArray = function(nums) {
+    const len = nums.length
+    this.sum = new Array(len).fill(0)
+    for(let i = 0; i < len; i++){
+      this.sum[i + 1] = nums[i] + this.sum[i]
+    }
+  };
+  
+  /** 
+   * @param {number} left 
+   * @param {number} right
+   * @return {number}
+   */
+ NumArray.prototype.sumRange = function(left, right) {
+    return this.sum[right + 1] - this.sum[left]
+};
 
 const numArray = new NumArray([-2, 0, 3, -5, 2, -1])
 console.log(numArray.sumRange(0, 2)); // return 1 ((-2) + 0 + 3)
