@@ -38,3 +38,7 @@ MyQueue.prototype.peek = function() {
 MyQueue.prototype.empty = function() {
     return !this.stack.length
 };
+//使用栈 来模拟队列
+//分为push、pop、peek和empty几个方法
+//按照队列先进先出的特征进行构造
+//使用栈来返回队头元素
