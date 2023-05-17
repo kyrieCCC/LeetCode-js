@@ -23,7 +23,29 @@ var reverseWords = function(s) {
 //抽出每一个单词进行reverse反转
 //最后push进res结果数组当中并返回
 
+const reverseWords_plus = (s) => {
+    const res = []
+    const n = s.length
+    let i = 0
+    while (i < n) {
+        let start = i
+        while (i < n && s.charAt(i) != ' ') {
+            i++
+        }
+        for (let j = start; j < i; j++){
+            res.push(s.charAt(start + i - 1 - j))
+        }
+        while (i < n && s.charAt(i) == ' ') {
+            i++
+            res.push(' ')
+        }
+    }
+    return res.join('')
+}
+
 const s1 = "Let's take LeetCode contest"
 const s2 = "God Ding"
 console.log(reverseWords(s1));
 console.log(reverseWords(s2))
+console.log(reverseWords_plus(s1))
+console.log(reverseWords_plus(s2))
