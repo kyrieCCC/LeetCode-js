@@ -42,6 +42,9 @@ const reverseWords_plus = (s) => {
     }
     return res.join('')
 }
+//来自leetcode官方的解法
+//巧妙的使用charAt来定位每一个单词中的字母出现的位置
+//记录下出现的位置并进行反转
 
 const s1 = "Let's take LeetCode contest"
 const s2 = "God Ding"
