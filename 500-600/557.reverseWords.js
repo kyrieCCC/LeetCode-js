@@ -10,5 +10,17 @@
  * @return {string}
  */
 var reverseWords = function(s) {
-
+    const arr = s.split(" ")
+    const res = []
+    while (arr.length) {
+        const val = arr.shift()
+        const val_reverse = val.split("").reverse().join('')
+        res.push(val_reverse)
+    }
+    return res.join(' ')
 };
+
+const s1 = "Let's take LeetCode contest"
+const s2 = "God Ding"
+console.log(reverseWords(s1));
+console.log(reverseWords(s2))
