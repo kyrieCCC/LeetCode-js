@@ -19,6 +19,9 @@ var reverseWords = function(s) {
     }
     return res.join(' ')
 };
+//首先使用split区分出每一个单词
+//抽出每一个单词进行reverse反转
+//最后push进res结果数组当中并返回
 
 const s1 = "Let's take LeetCode contest"
 const s2 = "God Ding"
