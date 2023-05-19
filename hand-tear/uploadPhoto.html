@@ -11,7 +11,7 @@
     <script>
         var input = document.getElementById('upload')
         input.addEventListener('change', function(e) {
-            var file = input.file[0]
+            var file = input.files[0]
             let formData = new FormData()
             formData.append('file', file)
             console.log('formData', formData);
