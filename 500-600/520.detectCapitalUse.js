@@ -34,11 +34,27 @@ var detectCapitalUse = function(word) {
     }
     return false
 };
+//ph
 //最简单最朴素的方法
 //首先通过正则表达式过滤出大写的和小写的单词字母
 //随后比较单词的长度是否全是小写或者是大写
 //如果不是就判断是否只有首字母大写
 //都不是就返回flase，有一项符合要求就返回true
+
+
+const detectCapitalUse_ans = (word) => {
+    if (word.length >= 2 && word[0] === word[0].toLowerCase() && word[1] === word[1].toUpperCase()) {
+        return false;
+    }
+    
+    // 无论第 1 个字母是否大写，其他字母必须与第 2 个字母的大小写相同
+    for (let i = 2; i < word.length; ++i) {
+        if (word[i] === word[i].toLowerCase() ^ word[1] === word[1].toLowerCase()) {
+            return false;
+        }
+    }
+    return true;
+}
 
 const word1 = 'USA'
 const word2 = 'FlaG'
