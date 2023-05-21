@@ -15,5 +15,29 @@
  * @return {boolean}
  */
 var detectCapitalUse = function(word) {
-    
+    const exp1 = /[A-Z]/, exp2 = /[a-z]/
+    const arr = []
+    const arr2 = []
+    for (let i = 0; i < word.length; i++) {
+        if (exp1.test(word[i])) {
+            arr.push(word[i])
+        }
+        if (exp2.test(word[i])) {
+            arr2.push(word[i])
+        }
+    }
+    if (arr.length == word.length || arr2.length == word.length) {
+        return true
+    }
+    else if (arr.length == 1 && arr[0] == word[0]) {
+        return true
+    }
+    return false
 };
+
+const word1 = 'USA'
+const word2 = 'FlaG'
+const word3 = 'Google'
+console.log(detectCapitalUse(word1));
+console.log(detectCapitalUse(word2));
+console.log(detectCapitalUse(word3));
