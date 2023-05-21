@@ -34,6 +34,11 @@ var detectCapitalUse = function(word) {
     }
     return false
 };
+//最简单最朴素的方法
+//首先通过正则表达式过滤出大写的和小写的单词字母
+//随后比较单词的长度是否全是小写或者是大写
+//如果不是就判断是否只有首字母大写
+//都不是就返回flase，有一项符合要求就返回true
 
 const word1 = 'USA'
 const word2 = 'FlaG'
