@@ -1,4 +1,4 @@
-// 520. 检测大写字母
+// 520ph. 检测大写字母
 // 我们定义，在以下情况时，单词的大写用法是正确的：
 // 全部字母都是大写，比如 "USA" 。
 // 单词中所有字母都不是大写，比如 "leetcode" 。
@@ -65,7 +65,7 @@ const word3 = 'Google'
 console.log(detectCapitalUse(word1));
 console.log(detectCapitalUse(word2));
 console.log(detectCapitalUse(word3));
-console.log('-=-=-=--=-=-=-=-=-==-=-=-=');
+console.log('-=-=-=--=-=-=-=-=-==-=-=-=penghui');
 console.log(detectCapitalUse_ans(word1));
 console.log(detectCapitalUse_ans(word2));
 console.log(detectCapitalUse_ans(word3));
