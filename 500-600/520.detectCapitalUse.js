@@ -55,6 +55,9 @@ const detectCapitalUse_ans = (word) => {
     }
     return true;
 }
+//官方解法，首先需要判断首字母若第 1 个字母为小写，则需额外判断第 2 个字母是否为小写
+//无论第 1 个字母是否大写，其他字母必须与第 2 个字母的大小写相同
+//如果有不符合的则说明不全是大写或者小写，直接返回false
 
 const word1 = 'USA'
 const word2 = 'FlaG'
@@ -62,3 +65,7 @@ const word3 = 'Google'
 console.log(detectCapitalUse(word1));
 console.log(detectCapitalUse(word2));
 console.log(detectCapitalUse(word3));
+console.log('-=-=-=--=-=-=-=-=-==-=-=-=');
+console.log(detectCapitalUse_ans(word1));
+console.log(detectCapitalUse_ans(word2));
+console.log(detectCapitalUse_ans(word3));
