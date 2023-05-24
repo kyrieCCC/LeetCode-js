@@ -26,6 +26,10 @@ var search = function (nums, target) {
     }
     return -1
 }
+// 正常的二分查找的方法
+// 首先创建两个变量left和right分别指向左右
+// 随后根据target的大小不断缩小范围，直到找到对应的下标
+// 如果找不到返回-1
 
 const search_other = (nums, target) => {
     return nums.findIndex(item => item == target)
