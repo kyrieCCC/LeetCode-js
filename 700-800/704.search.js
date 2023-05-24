@@ -34,6 +34,8 @@ var search = function (nums, target) {
 const search_other = (nums, target) => {
     return nums.findIndex(item => item == target)
 }
+//其他有意思的解法，但并不是二分查找，并且时间复杂度为on
+//但是一行代码解决QAQ
 
 
 const nums1 = [-1, 0, 3, 5, 9, 12], target1 = 9
