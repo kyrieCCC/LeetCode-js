@@ -27,5 +27,14 @@ var search = function (nums, target) {
     return -1
 }
 
+const search_other = (nums, target) => {
+    return nums.findIndex(item => item == target)
+}
+
+
 const nums1 = [-1, 0, 3, 5, 9, 12], target1 = 9
 const nums2 = [-1, 0, 3, 5, 9, 12], target2 = 2
+console.log(search(nums1, target1));
+console.log(search(nums2, target2));
+console.log(search_other(nums1, target1));
+console.log(search_other(nums2, target2));
