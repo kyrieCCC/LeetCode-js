@@ -29,6 +29,11 @@ var distributeCandies = function (candyType) {
 // 最后来比对去重后的数组的长度，如果长度比原本数组的一半长，说明糖果的种类非常之多
 // 反之则说明总类少，直接返回去重后的数组长度
 
+const distributeCandies_ans = (candyType) => {
+    const set = new Set(candyType)
+    return Math.min(set.size, candyType.length)
+} 
+
 const candyType1 = [1, 1, 2, 2, 3, 3]
 const candyType2 = [6, 6, 6, 6]
 console.log(distributeCandies(candyType1));
