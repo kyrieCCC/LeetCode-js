@@ -38,3 +38,6 @@ const candyType1 = [1, 1, 2, 2, 3, 3]
 const candyType2 = [6, 6, 6, 6]
 console.log(distributeCandies(candyType1));
 console.log(distributeCandies(candyType2));
+console.log('-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-');
+console.log(distributeCandies_ans(candyType1));
+console.log(distributeCandies_ans(candyType2));
