@@ -33,6 +33,9 @@ const distributeCandies_ans = (candyType) => {
     const set = new Set(candyType)
     return Math.min(set.size, candyType.length)
 } 
+// 官方答案，其实主题思路与我写的差不多
+// 主要还是针对两个不同长度的比较
+// 通过长度的比较输出糖果的总类
 
 const candyType1 = [1, 1, 2, 2, 3, 3]
 const candyType2 = [6, 6, 6, 6]
