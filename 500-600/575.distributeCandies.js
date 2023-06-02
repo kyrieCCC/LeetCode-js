@@ -24,6 +24,10 @@ var distributeCandies = function (candyType) {
         return arr.length
     }
 }
+// 直接从长度来判断是否符合题目要求
+// 首先需要为数组进行去重，可以直接引入set的方式
+// 最后来比对去重后的数组的长度，如果长度比原本数组的一半长，说明糖果的种类非常之多
+// 反之则说明总类少，直接返回去重后的数组长度
 
 const candyType1 = [1, 1, 2, 2, 3, 3]
 const candyType2 = [6, 6, 6, 6]
