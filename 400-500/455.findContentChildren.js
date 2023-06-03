@@ -40,7 +40,25 @@ var findContentChildren = function (g, s) {
 // 之后进行判断，如果g小于s的值则说明满足胃口反之不满足
 // 最后当i或者j越界的时候结束循环，返回i值
 
+
+const findContentChildren_ans = (g, s) => {
+    g = g.sort((a, b) => a - b)
+    s = s.sort((a, b) => a - b)
+    let index = s.length - 1
+    let res = 0
+    for (let i = g.length - 1; i >= 0; i--){
+        if (index >= 0 && s[index] >= g[i]) {
+            res++
+            index--
+        }
+    }
+    return res
+}
+
 const g1 = [1, 2, 3], s1 = [1, 1]
 const g2 = [1, 2], s2 = [1, 2, 3]
 console.log(findContentChildren(g1, s1));
 console.log(findContentChildren(g2, s2));
+console.log('-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-==-=');
+console.log(findContentChildren_ans(g1, s1));
+console.log(findContentChildren_ans(g2, s2));
