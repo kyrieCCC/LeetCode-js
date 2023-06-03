@@ -35,6 +35,10 @@ var findContentChildren = function (g, s) {
     }
     return i
 }
+// 首先通过sort先给数组进行排序操作
+// 随后设置两个指针，分别指向g和s的首部
+// 之后进行判断，如果g小于s的值则说明满足胃口反之不满足
+// 最后当i或者j越界的时候结束循环，返回i值
 
 const g1 = [1, 2, 3], s1 = [1, 1]
 const g2 = [1, 2], s2 = [1, 2, 3]
