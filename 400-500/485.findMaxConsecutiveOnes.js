@@ -29,6 +29,10 @@ var findMaxConsecutiveOnes = function (nums) {
         }
     }
 }
+// 直接使用i与j两个指针分别指向第一个1和最后一个1
+// 每次遇到0的时候就重新判断新的1在哪里
+// 每次遇到零都要将现在的长度计算出来，存在max当中
+// 最后返回最大的max值
 
 const nums1 = [1, 1, 0, 1, 1, 1]
 const nums2 = [1, 0, 1, 1, 0, 1]
