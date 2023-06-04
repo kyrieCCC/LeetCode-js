@@ -34,6 +34,21 @@ var findMaxConsecutiveOnes = function (nums) {
 // 每次遇到零都要将现在的长度计算出来，存在max当中
 // 最后返回最大的max值
 
+const findMaxConsecutiveOnes_ans = (nums) => {
+    let max = 0, count = 0
+    const n = nums.length
+    for (let i = 0; i < n; i++){
+        if (nums[i] == 1) {
+            count++
+        } else {
+            max = Math.max(count, max)
+            count = 0
+        }
+    }
+    max = Math.max(count, max)
+    return max
+}
+
 const nums1 = [1, 1, 0, 1, 1, 1]
 const nums2 = [1, 0, 1, 1, 0, 1]
 const nums3 = [0, 0]
@@ -41,3 +56,7 @@ const nums3 = [0, 0]
 console.log(findMaxConsecutiveOnes(nums1));
 console.log(findMaxConsecutiveOnes(nums2));
 console.log(findMaxConsecutiveOnes(nums3));
+console.log('=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-==-=-=-=-=');
+console.log(findMaxConsecutiveOnes_ans(nums1));
+console.log(findMaxConsecutiveOnes_ans(nums2));
+console.log(findMaxConsecutiveOnes_ans(nums3));
