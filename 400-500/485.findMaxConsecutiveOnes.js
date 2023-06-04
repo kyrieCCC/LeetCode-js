@@ -58,6 +58,15 @@ const findMaxConsecutiveOnes_ans1 = (nums) => {
     const max = arr.sort((a, b) => b.length - a.length)[0]
     return max.length
 } 
+// 首先将数组转换为字符串，再通过0来分割为多个小数组
+// 通过排序的方式计算出最长的连续1
+// 返回最长的长度
+
+
+const findMaxConsecutiveOnes_ans2 = (nums) => {
+    const arr = nums.join('').split('0')
+    return Math.max(...(arr.map((item) => item.length)))
+} 
 
 const nums1 = [1, 1, 0, 1, 1, 1]
 const nums2 = [1, 0, 1, 1, 0, 1]
@@ -74,3 +83,7 @@ console.log('=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-==-=-=-=-=');
 console.log(findMaxConsecutiveOnes_ans1(nums1));
 console.log(findMaxConsecutiveOnes_ans1(nums2));
 console.log(findMaxConsecutiveOnes_ans1(nums3));
+console.log('=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-==-=-=-=-=');
+console.log(findMaxConsecutiveOnes_ans2(nums1));
+console.log(findMaxConsecutiveOnes_ans2(nums2));
+console.log(findMaxConsecutiveOnes_ans2(nums3));
