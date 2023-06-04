@@ -53,6 +53,12 @@ const findMaxConsecutiveOnes_ans = (nums) => {
 // 使用count来记录每次连续的个数
 // 最后返回最大的max值
 
+const findMaxConsecutiveOnes_ans1 = (nums) => {
+    const arr = nums.join('').split('0')
+    const max = arr.sort((a, b) => b.length - a.length)[0]
+    return max.length
+} 
+
 const nums1 = [1, 1, 0, 1, 1, 1]
 const nums2 = [1, 0, 1, 1, 0, 1]
 const nums3 = [0, 0]
@@ -64,3 +70,7 @@ console.log('=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-==-=-=-=-=');
 console.log(findMaxConsecutiveOnes_ans(nums1));
 console.log(findMaxConsecutiveOnes_ans(nums2));
 console.log(findMaxConsecutiveOnes_ans(nums3));
+console.log('=-=-=-=-=-=-=--=-=-=-=--=-=-=-=-==-=-=-=-=');
+console.log(findMaxConsecutiveOnes_ans1(nums1));
+console.log(findMaxConsecutiveOnes_ans1(nums2));
+console.log(findMaxConsecutiveOnes_ans1(nums3));
