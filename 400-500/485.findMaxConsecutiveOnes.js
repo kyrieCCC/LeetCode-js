@@ -48,6 +48,10 @@ const findMaxConsecutiveOnes_ans = (nums) => {
     max = Math.max(count, max)
     return max
 }
+// 这里官方的答案给出的与我们类似
+// 实质上就是计算连续的1的个数有多少
+// 使用count来记录每次连续的个数
+// 最后返回最大的max值
 
 const nums1 = [1, 1, 0, 1, 1, 1]
 const nums2 = [1, 0, 1, 1, 0, 1]
