@@ -26,6 +26,10 @@ var arrangeCoins = function (n) {
     }
     return res
 }
+// 首先使用res来记录此时的层数，i记录每一层需要的个数
+// 每次到下一层的时候都动态的计算i和n的值
+// 当不满足层数的情况的时候就跳出循环
+// 直接返回res
 
 const n1 = 5
 const n2 = 8
