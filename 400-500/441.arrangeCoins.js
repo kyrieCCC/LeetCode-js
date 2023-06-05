@@ -31,7 +31,7 @@ var arrangeCoins = function (n) {
 // 当不满足层数的情况的时候就跳出循环
 // 直接返回res
 
-const arrangeCoins = (n) => {
+const arrangeCoins_ans = (n) => {
     return Math.floor((Math.sqrt(8 * n + 1) - 1) / 2);
 }
 // 这里使用的是数学的方法
@@ -41,3 +41,6 @@ const n1 = 5
 const n2 = 8
 console.log(arrangeCoins(n1));
 console.log(arrangeCoins(n2));
+console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(arrangeCoins_ans(n1));
+console.log(arrangeCoins_ans(n2));
