@@ -34,6 +34,8 @@ var arrangeCoins = function (n) {
 const arrangeCoins = (n) => {
     return Math.floor((Math.sqrt(8 * n + 1) - 1) / 2);
 }
+// 这里使用的是数学的方法
+// 直接通过求解方程来计算 n 枚硬币可形成的完整阶梯行
 
 const n1 = 5
 const n2 = 8
