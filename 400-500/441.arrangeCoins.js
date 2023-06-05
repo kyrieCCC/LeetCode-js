@@ -14,5 +14,20 @@
  * @return {number}
  */
 var arrangeCoins = function (n) { 
-    
+    if(n == 0) {
+        return 0
+    }
+    let res = 1, i = 1
+    n = n - 1
+    while(i < n) {
+        n = n - (i + 1)
+        i = i + 1
+        res++
+    }
+    return res
 }
+
+const n1 = 5
+const n2 = 8
+console.log(arrangeCoins(n1));
+console.log(arrangeCoins(n2));
