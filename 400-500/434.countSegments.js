@@ -9,11 +9,13 @@
  * @return {number}
  */
 var countSegments = function (s) { 
-    const arr = s.split('')
-    return arr
+    const arr = s.split(' ').filter(item => item != '')
+    return arr.length
 }
 
 const s1 = "                "
 const s2 = "Hello, my name is John"
 const s3 = ""
-console.log(s1.length)
+console.log(countSegments(s1));
+console.log(countSegments(s2));
+console.log(countSegments(s3));
