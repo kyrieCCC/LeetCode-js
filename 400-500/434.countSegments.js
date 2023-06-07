@@ -16,6 +16,9 @@ var countSegments = function (s) {
 // 最后留在arr里面的就是单词的部分
 // 直接返回arr的长度
 
+const countSegments_2 = (s) => {
+    return s.split(' ').filter(item => item != '').length
+}
 
 const s1 = "                "
 const s2 = "Hello, my name is John"
@@ -23,3 +26,7 @@ const s3 = ""
 console.log(countSegments(s1));
 console.log(countSegments(s2));
 console.log(countSegments(s3));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(countSegments_2(s1));
+console.log(countSegments_2(s2));
+console.log(countSegments_2(s3));
