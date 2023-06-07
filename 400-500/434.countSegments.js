@@ -19,6 +19,8 @@ var countSegments = function (s) {
 const countSegments_2 = (s) => {
     return s.split(' ').filter(item => item != '').length
 }
+// 精简版，直接返回返回要求的长度即可
+// 不使用额外的空间来定义一个数组
 
 const s1 = "                "
 const s2 = "Hello, my name is John"
