@@ -31,6 +31,9 @@ const countSegments_ans = (s) => {
     }
     return count
 }
+// 官方答案，其实就是判断是否为一个连续的单词
+// 如果是连续的单词就count++
+// 反之就继续遍历
 
 const s1 = "                "
 const s2 = "Hello, my name is John"
