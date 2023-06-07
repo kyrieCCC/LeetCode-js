@@ -22,6 +22,16 @@ const countSegments_2 = (s) => {
 // 精简版，直接返回返回要求的长度即可
 // 不使用额外的空间来定义一个数组
 
+const countSegments_ans = (s) => {
+    let count = 0
+    for(let i = 0; i < s.length; i++){
+        if((i === 0 || s[i - 1] === ' ') && s[i] !== ' ') {
+            count++
+        }
+    }
+    return count
+}
+
 const s1 = "                "
 const s2 = "Hello, my name is John"
 const s3 = ""
