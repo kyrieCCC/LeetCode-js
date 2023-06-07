@@ -12,6 +12,10 @@ var countSegments = function (s) {
     const arr = s.split(' ').filter(item => item != '')
     return arr.length
 }
+// 题目中要求不能是空格字符，于是我们使用空格区分好单词后需要重新去除空格字符
+// 最后留在arr里面的就是单词的部分
+// 直接返回arr的长度
+
 
 const s1 = "                "
 const s2 = "Hello, my name is John"
