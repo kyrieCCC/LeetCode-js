@@ -35,6 +35,8 @@ var shortestToChar = function (s, c) {
     }
     return ans;
 }
+// 官方解法，最简单的做法
+// 直接使用两次遍历来确定不同元素之间的位置
 
 const s1 = "loveleetcode", c1 = "e"
 console.log(shortestToChar(s1, c1));
