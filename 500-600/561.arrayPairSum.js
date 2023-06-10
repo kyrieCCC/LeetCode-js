@@ -22,6 +22,10 @@ var arrayPairSum = function (nums) {
     }
     return res
 }
+// 分组的原因是因为要找出每组中的最小值
+// 那么直接进行排序，每次按顺序选择最小的两个值进行加法
+// 这样就累加就能得到res的最小值
+
 const nums1 = [1, 4, 3, 2]
 const nums2 = [6, 2, 6, 5, 1, 2]
 console.log(arrayPairSum(nums1));
