@@ -62,6 +62,9 @@ const arrayPairSum_fast = (nums) => {
     }
     return res
 }
+// 快速排序替代原本的sort
+// 使得排序这一操作减少消耗的时间
+// 在一定程度上优化了这一算法
 
 const nums1 = [1, 4, 3, 2]
 const nums2 = [6, 2, 6, 5, 1, 2]
