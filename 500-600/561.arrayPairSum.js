@@ -26,7 +26,21 @@ var arrayPairSum = function (nums) {
 // 那么直接进行排序，每次按顺序选择最小的两个值进行加法
 // 这样就累加就能得到res的最小值
 
+/**
+ * 
+ * @param {number[]} nums 
+ * @returns 
+ */
+const arrayPairSum_plus = (nums) => {
+    return nums.sort((a, b) => { a - b }).filter((item, index) => {
+        return index % 2 == 0
+    }).reduce((a, b) => a + b)
+}
+
 const nums1 = [1, 4, 3, 2]
 const nums2 = [6, 2, 6, 5, 1, 2]
 console.log(arrayPairSum(nums1));
 console.log(arrayPairSum(nums2));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-');
+console.log(arrayPairSum_plus(nums1));
+console.log(arrayPairSum_plus(nums2));
