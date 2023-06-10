@@ -36,6 +36,9 @@ const arrayPairSum_plus = (nums) => {
         return index % 2 == 0
     }).reduce((a, b) => a + b)
 }
+// 第一种解法的简便写法，但是实际上算法并没有什么优化
+// sort排序，filter过滤奇数项，reduce计算结果
+// 最后输出值
 
 const nums1 = [1, 4, 3, 2]
 const nums2 = [6, 2, 6, 5, 1, 2]
