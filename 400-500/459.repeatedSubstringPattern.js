@@ -38,6 +38,10 @@ const repeatedSubstringPattern_ans = (s) => {
     const str = s + s
     return str.substring(1, str.length - 1).includes(s)
 }
+// 官方的解答
+// 组合两个字符串s
+// 随后使用substring和includes判断是否是重复组成的
+// 直接返回结果
 
 const s1 = 'bb'
 const s2 = 'aba'
