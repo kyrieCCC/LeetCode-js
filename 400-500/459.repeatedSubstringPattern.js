@@ -34,10 +34,15 @@ var repeatedSubstringPattern = function (s) {
     return false
 }
 
+const repeatedSubstringPattern_ans = (s) => {
+    const str = s + s
+    return str.substring(1, str.length - 1).includes(s)
+}
+
 const s1 = 'bb'
 const s2 = 'aba'
 const s3 = "abcabcabcabc"
 
-console.log(repeatedSubstringPattern(s1));
-console.log(repeatedSubstringPattern(s2));
-console.log(repeatedSubstringPattern(s3));
+console.log(repeatedSubstringPattern_ans(s1));
+console.log(repeatedSubstringPattern_ans(s2));
+console.log(repeatedSubstringPattern_ans(s3));
