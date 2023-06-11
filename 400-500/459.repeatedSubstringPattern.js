@@ -11,5 +11,33 @@
  * @return {boolean}
  */
 var repeatedSubstringPattern = function (s) { 
-    
+    let tag = 0
+    for(let i = 1; i < s.length; i++) {
+        const item = s.slice(0, i + 1)
+        const len = i + 1
+        let j = i + 1
+        tag = 0
+        while (j < s.length){
+            const other_item = s.slice(j, j + len)
+            j = j + len
+            if(other_item != item) {
+                tag = 1
+            }
+            if (tag) {
+                break
+            }
+        }
+        if(!tag && len != s.length) {
+            return true
+        }
+    }
+    return false
 }
+
+const s1 = 'bb'
+const s2 = 'aba'
+const s3 = "abcabcabcabc"
+
+console.log(repeatedSubstringPattern(s1));
+console.log(repeatedSubstringPattern(s2));
+console.log(repeatedSubstringPattern(s3));
