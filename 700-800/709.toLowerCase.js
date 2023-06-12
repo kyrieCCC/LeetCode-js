@@ -32,6 +32,12 @@ const toLowerCase_plus = (s) => {
     }
     return arr.join('')
 }
+// 第一个方法的稍微优化算法
+// 在这里我们添加了一个判断，判断其是否为大写
+// 如果大写就改为小写，反之改为直接push
+// 最后返回join
+
+const toLowerCase_ans = (s) => { }
 
 const s1 = 'Hello'
 const s2 = 'LOVEPH'
