@@ -20,7 +20,23 @@ var toLowerCase = function (s) {
 // 将每一个s的值都改为小写后
 // 返回join的结果
 
+const toLowerCase_plus = (s) => {
+    const reg = /[A-Z]/
+    const arr = []
+    for (let i = 0; i < s.length; i++){
+        if (reg.test(s[i])) {
+            arr.push(s[i].toLowerCase())
+        } else {
+            arr.push(s[i])
+        }
+    }
+    return arr.join('')
+}
+
 const s1 = 'Hello'
 const s2 = 'LOVEPH'
 console.log(toLowerCase(s1));
-console.log(toLowerCase(s2))
+console.log(toLowerCase(s2));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(toLowerCase_plus(s1));
+console.log(toLowerCase_plus(s2));
