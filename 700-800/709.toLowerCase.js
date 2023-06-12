@@ -9,5 +9,14 @@
  * @return {string}
  */
 var toLowerCase = function (s) { 
-    
+    const arr = []
+    for (let i = 0; i < s.length; i++){
+        arr.push(s[i].toLowerCase())
+    }
+    return arr.join('')
 }
+
+const s1 = 'Hello'
+const s2 = 'LOVEPH'
+console.log(toLowerCase(s1));
+console.log(toLowerCase(s2))
