@@ -37,7 +37,10 @@ const toLowerCase_plus = (s) => {
 // 如果大写就改为小写，反之改为直接push
 // 最后返回join
 
-const toLowerCase_ans = (s) => { }
+const toLowerCase_ans = (s) => { 
+    return s.toLowerCase()
+}
+// 简单粗暴的方法，就是直接全部转为小写即可
 
 const s1 = 'Hello'
 const s2 = 'LOVEPH'
