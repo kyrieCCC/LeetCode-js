@@ -15,6 +15,10 @@ var toLowerCase = function (s) {
     }
     return arr.join('')
 }
+// 浪费空间版本
+// 首先创建了一个新的数组，来记录每一个s的值
+// 将每一个s的值都改为小写后
+// 返回join的结果
 
 const s1 = 'Hello'
 const s2 = 'LOVEPH'
