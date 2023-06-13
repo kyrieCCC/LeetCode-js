@@ -29,6 +29,13 @@ var numJewelsInStones = function (jewels, stones) {
 // 如果有就count++
 // 最后返回count值
 
+const numJewelsInStones_ans = (jewels, stones) => {
+    const set = new Set(jewels.split(''))
+    return stones.split('').reduce((prev, val) => {
+        return prev + set.has(val)
+    }, 0)
+}
+
 const jewels1 = 'aA', stones1 = 'aAAbbbb'
 const jewels2 = 'z', stones2 = 'ZZ'
 console.log(numJewelsInStones(jewels1, stones1));
