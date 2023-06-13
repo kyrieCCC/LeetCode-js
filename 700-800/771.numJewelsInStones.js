@@ -13,7 +13,16 @@
  * @return {number}
  */
 var numJewelsInStones = function (jewels, stones) { 
-
+    const arr = jewels.split('')
+    let count = 0
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < stones.length; j++){
+            if(arr[i] == stones[j]) {
+                count++
+            }
+        }
+    }
+    return count
 }
 
 const jewels1 = 'aA', stones1 = 'aAAbbbb'
