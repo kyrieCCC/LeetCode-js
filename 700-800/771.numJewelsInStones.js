@@ -35,6 +35,10 @@ const numJewelsInStones_ans = (jewels, stones) => {
         return prev + set.has(val)
     }, 0)
 }
+// 遍历字符串 jewels
+// 使用哈希集合存储其中的字符，然后遍历字符串 stones
+// 对于其中的每个字符，如果其在哈希集合中，则是宝石。
+
 
 const jewels1 = 'aA', stones1 = 'aAAbbbb'
 const jewels2 = 'z', stones2 = 'ZZ'
