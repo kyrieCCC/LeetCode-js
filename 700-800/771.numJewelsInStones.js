@@ -24,6 +24,10 @@ var numJewelsInStones = function (jewels, stones) {
     }
     return count
 }
+// 双指针，一个指向宝石，一个指向石头
+// 随后开始判断，当指向这个宝石的时候，石头堆里有没有对应的值
+// 如果有就count++
+// 最后返回count值
 
 const jewels1 = 'aA', stones1 = 'aAAbbbb'
 const jewels2 = 'z', stones2 = 'ZZ'
