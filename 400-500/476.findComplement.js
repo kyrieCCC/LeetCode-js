@@ -14,5 +14,20 @@
  * @return {number}
  */
 var findComplement = function(num) {
-    const num2 = num.toString(2)
+    const arr = num.toString(2).split('')
+    const res = []
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] == '1') {
+            res.push(0)
+        } else {
+            res.push(1)
+        }
+    }
+    const ans = parseInt(res.join(''), 2)
+    return ans
 };
+
+const num1 = 5
+const num2 = 1
+console.log(findComplement(num1));
+console.log(findComplement(num2))
