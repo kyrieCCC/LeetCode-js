@@ -26,6 +26,9 @@ var findComplement = function(num) {
     const ans = parseInt(res.join(''), 2)
     return ans
 };
+// 首先使用tostring将num转为2进制数
+// 再遍历num的二进制结果，并取反
+// 最后把结果由2进制转换为10进制并输出
 
 const num1 = 5
 const num2 = 1
