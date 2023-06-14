@@ -30,7 +30,19 @@ var findComplement = function(num) {
 // 再遍历num的二进制结果，并取反
 // 最后把结果由2进制转换为10进制并输出
 
+const findComplement_plus = (num) => {
+    const arr = num.toString(2)
+    const res = []
+    for (let i = 0; i < arr.length; i++){
+        res.push(arr[i] ^ 1)
+    }
+    return parseInt(res.join(''), 2)
+}
+
 const num1 = 5
 const num2 = 1
 console.log(findComplement(num1));
-console.log(findComplement(num2))
+console.log(findComplement(num2));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(findComplement_plus(num1));
+console.log(findComplement_plus(num2));
