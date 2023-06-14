@@ -38,6 +38,8 @@ const findComplement_plus = (num) => {
     }
     return parseInt(res.join(''), 2)
 }
+// 第一个方法的优化版本
+// 引入了异或的思想，如果异或1是1就返回0，反之返回0
 
 const num1 = 5
 const num2 = 1
