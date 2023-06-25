@@ -23,3 +23,6 @@ var removeDuplicates = function (s) {
     }
     return stk.join('')
 }
+
+const s = "abbaca"
+console.log(removeDuplicates(s));
