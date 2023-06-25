@@ -13,5 +13,13 @@
  * @return {string}
  */
 var removeDuplicates = function (s) { 
-    
+    const stk = []
+    for(const item of s) {
+        if(stk.length && stk[stk.length - 1] === item) {
+            stk.pop()
+        } else {
+            stk.push(item)
+        }
+    }
+    return stk.join('')
 }
