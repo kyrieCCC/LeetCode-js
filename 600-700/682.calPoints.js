@@ -28,7 +28,7 @@ var calPoints = function(operations) {
             res.pop()
         }    
         else if (operations[i] == 'D') {
-            res.push(res[res.length - 1] * res[res.length - 2])
+            res.push(res[res.length - 1] * 2)
         }
         else if (operations[i] == '+') {
             res.push(res[res.length - 1] + res[res.length - 2])
@@ -47,3 +47,8 @@ var calPoints = function(operations) {
     }
     return ans
 };
+
+const ops1 = ["5", "2", "C", "D", "+"]
+const ops2 = ["5", "-2", "4", "C", "D", "9", "+", "+"]
+console.log(calPoints(ops1));
+console.log(calPoints(ops2));
