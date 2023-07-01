@@ -37,15 +37,13 @@ var calPoints = function(operations) {
             res.push(Number(operations[i]))
         }
     }
-    // const ans = res.reduce((a, b) => {
-    //     a + b
-    // }, 0)
-    // return ans
-    let ans = 0
-    for(let i = 0; i < res.length; i++) {
-        ans += res[i]
-    }
+    const ans = res.reduce((a, b) => a + b, 0)
     return ans
+    // let ans = 0
+    // for(let i = 0; i < res.length; i++) {
+    //     ans += res[i]
+    // }
+    // return ans
 };
 
 const ops1 = ["5", "2", "C", "D", "+"]
