@@ -46,8 +46,3 @@ var calPoints = function(operations) {
     // return ans
 };
 // 简单题，不做过多解释
-
-const ops1 = ["5", "2", "C", "D", "+"]
-const ops2 = ["5", "-2", "4", "C", "D", "9", "+", "+"]
-console.log(calPoints(ops1));
-console.log(calPoints(ops2));
