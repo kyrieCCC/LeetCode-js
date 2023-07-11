@@ -21,6 +21,8 @@ var reverseLeftWords = function(s, n) {
     }
     return arr.join("")
 };
+// 通过shift将每次数组的头元素取出
+// push到原数组当中 完成reverse操作
 
 const s1 = "abcdefg", k1 = 2;
 const s2 = "lrloseumgh", k2 = 6;
