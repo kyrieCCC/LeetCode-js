@@ -24,9 +24,11 @@ var reverseLeftWords = function(s, n) {
 // 通过shift将每次数组的头元素取出
 // push到原数组当中 完成reverse操作
 
-const reverseLeftWords_ans = () => {
+const reverseLeftWords_ans = (s, n) => {
     return s.slice(n) + s.slice(0, n);
 };
+// 此方法通过slice进行切分，首先切出指定的n后面的元素
+// 将前面的元素同样切分出来通过拼接的方式进行反转
 
 const s1 = "abcdefg", k1 = 2;
 const s2 = "lrloseumgh", k2 = 6;
