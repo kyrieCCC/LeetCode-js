@@ -24,7 +24,13 @@ var reverseLeftWords = function(s, n) {
 // 通过shift将每次数组的头元素取出
 // push到原数组当中 完成reverse操作
 
+const reverseLeftWords_ans = () => {
+    return s.slice(n) + s.slice(0, n);
+};
+
 const s1 = "abcdefg", k1 = 2;
 const s2 = "lrloseumgh", k2 = 6;
 console.log(reverseLeftWords(s1, k1));
 console.log(reverseLeftWords(s2, k2));
+console.log(reverseLeftWords_ans(s1, k1));
+console.log(reverseLeftWords_ans(s2, k2));
