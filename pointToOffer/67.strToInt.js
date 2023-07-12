@@ -20,14 +20,14 @@ var strToInt = function(str) {
     var INT_MIN = -Math.pow(2,31), INT_MAX = Math.pow(2,31) - 1;
     var reg = new RegExp(/^[\+\-]?\d+/) ;
     var result = str.match(reg);
-    console.log(result);
+    // console.log(result);
     if(result){
         if(result[0][0] == "-" && result[0] < INT_MIN){  
             return INT_MIN;
         }else if(result > INT_MAX){
             return INT_MAX;
         }  
-        return result; 
+        return result[0]; 
     }else{
         return 0;
     }
@@ -35,6 +35,31 @@ var strToInt = function(str) {
 // 正则表达式解决
 // 正则表达的意思是匹配前面出现0或1次的正负号，并且后面跟着数字，遇到非数字就会打断匹配
 // 匹配出来的字符串即为我们需要的内容
+
+const str_ans = (str) => {
+    str = str.trim(); // 去掉前后空格
+    if(str == ""){   
+        return 0;  
+    }
+    var res = 0, signBit = 0;
+    var i = 1;
+    var INT_MIN = -Math.pow(2, 31), INT_MAX = Math.pow(2, 31) - 1;
+    if (str[0] == '+' || str[0] == '-') {
+        signBit = (str[0] == '-') ? 1 : 0
+    } else {
+        i = 0
+    }
+    while (i < str.length && str[i] >= '0' && str[i] <= '9') {
+        res = 10 * res + str[i].charCodeAt() - "0".charCodeAt(); 
+        if (-res < INT_MIN && signBit == 1) {
+            return INT_MIN
+        } else if (signBit == 0 && res > INT_MAX) {
+            return INT_MAX
+        }
+        i++
+    }
+    return signBit == 1 ? -res : res;
+}
 
 const s1 = '43';
 const s2 = '   -43';
@@ -46,3 +71,9 @@ console.log(strToInt(s2));
 console.log(strToInt(s3));
 console.log(strToInt(s4));
 console.log(strToInt(s5));
+console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(str_ans(s1));
+console.log(str_ans(s2));
+console.log(str_ans(s3));
+console.log(str_ans(s4));
+console.log(str_ans(s5));
