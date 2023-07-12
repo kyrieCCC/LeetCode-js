@@ -60,6 +60,9 @@ const str_ans = (str) => {
     }
     return signBit == 1 ? -res : res;
 }
+// 循环判断每一个数值
+// 需要提前判断前面是否存在正负号
+// 使用sign来表示正负
 
 const s1 = '43';
 const s2 = '   -43';
