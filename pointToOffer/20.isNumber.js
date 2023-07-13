@@ -51,6 +51,12 @@ var isNumber = function (s) {
     }
     return numFlag; 
 }
+// 几乎没涉及到算法的思想
+// 只需要根据题目大意设置不同的if判断
+// 每次出现新的元素都要判断是否符合题意
+// 若不符合直接返回false
+
+
 const s1 = "0"
 const s2 = "e"
 const s3 = "."
