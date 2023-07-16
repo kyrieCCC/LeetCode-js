@@ -21,3 +21,5 @@ var getIntersectionNode = function (headA, headB) {
         nodeB = nodeB.next
     }
 }
+// 哈希值记录a链表的结点
+// 再遍历b链表查找共同节点即可
