@@ -16,5 +16,11 @@ var twoSum = function (nums, target) {
         else left++
     }
 }
+// 简单到爆炸的题
+// 直接使用头尾指针即可
+// 每次相加都会判断是否超出或者小于target值
+// 最后返回响应结果
+
+// 使用map也是可以的
 const nums = [2, 7, 11, 15], target = 9
 console.log(twoSum(nums, target));
