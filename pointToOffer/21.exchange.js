@@ -15,6 +15,13 @@ var exchange = function (nums) {
     }
     return arr1.concat(arr2)
 }
+// 正常的for循环解法
+// 遍历全部元素，当元素为奇数则放到arr1，反之放置到arr2
+// 最后返回concat拼接起来的结果
+
+const exchange_plus = (nums) => {
+    
+}
 
 const nums1 = [1, 2, 3, 4]
 console.log(exchange(nums1));
