@@ -28,13 +28,26 @@ const exchange_plus = (nums) => {
 }
 
 const exchange_ans = (nums) => {
-    const res = []
-    for (const item of nums) {
-        item % 2 !== 0 ? res.unshift(item) : res.push(item);
+    let left = 0, right = nums.length - 1;
+    while (left < right) {
+        while (left < right && nums[left] % 2 == 1) {
+            left++;
+        }
+        while (left < right && nums[right] % 2 == 0) {
+            right--;
+        }
+        if (left < right) {
+            const temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
     }
-    return res
+    return nums;
 }
 
 const nums1 = [1, 2, 3, 4]
 console.log(exchange(nums1));
 console.log(exchange_plus(nums1));
+console.log(exchange_ans(nums1));
