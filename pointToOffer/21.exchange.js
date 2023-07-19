@@ -20,8 +20,21 @@ var exchange = function (nums) {
 // 最后返回concat拼接起来的结果
 
 const exchange_plus = (nums) => {
-    
+    const res = []
+    for (const item of nums) {
+        item % 2 !== 0 ? res.unshift(item) : res.push(item);
+    }
+    return res
+}
+
+const exchange_ans = (nums) => {
+    const res = []
+    for (const item of nums) {
+        item % 2 !== 0 ? res.unshift(item) : res.push(item);
+    }
+    return res
 }
 
 const nums1 = [1, 2, 3, 4]
 console.log(exchange(nums1));
+console.log(exchange_plus(nums1));
