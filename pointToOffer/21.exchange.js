@@ -46,6 +46,10 @@ const exchange_ans = (nums) => {
     }
     return nums;
 }
+// 原地交换的解法
+// 每当遇到首尾分为遇到第一个奇数和偶数的时候，将两个数进行交换
+// 这样可以确保交换后的数组符合题意
+// 实现原地交换，空间复杂度为o1
 
 const nums1 = [1, 2, 3, 4]
 console.log(exchange(nums1));
