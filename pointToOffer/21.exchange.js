@@ -9,5 +9,12 @@
  * @return {number[]}
  */
 var exchange = function (nums) { 
-    
+    const arr1 = [], arr2 = [];
+    for (const item of nums) {
+        item % 2 !== 0 ? arr1.push(item) : arr2.push(item)
+    }
+    return arr1.concat(arr2)
 }
+
+const nums1 = [1, 2, 3, 4]
+console.log(exchange(nums1));
