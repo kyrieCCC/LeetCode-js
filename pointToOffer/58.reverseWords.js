@@ -17,6 +17,18 @@ var reverseWords = function (s) {
 // 利用语法特性，首先去除两边的空格符
 // 使用正则表达式匹配出非空格字符，在进行反转
 // 将不同单词间添加空格最后输出即可
+
+const reverseWords_ans = (s) => {
+    s = s.trim().split(/\s+/);
+    const reverse = (l, r) => {
+        while (l < r) {
+            [s[l++], s[r--]] = [s[r], s[l]];
+        }
+    }
+
+    reverse(0, s.length - 1);
+    return s.join(' ');
+}
  
 const s1 = "the sky is blue";
 const s2 = "  hello world!  ";
@@ -24,3 +36,7 @@ const s3 = "a good   example";
 console.log(reverseWords(s1));
 console.log(reverseWords(s2));
 console.log(reverseWords(s3));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
+console.log(reverseWords_ans(s1));
+console.log(reverseWords_ans(s2));
+console.log(reverseWords_ans(s3));
