@@ -45,3 +45,9 @@ deepCloneMsg(obj).then(item => console.log(obj))
 //这个方法我们解构出两个端口对象port1 与 port2
 //port1通过postMessage方法传递一个内容
 //port2通过onmessage通过回调函数来接收一个内容
+
+
+
+// 手动递归实现深度克隆
+// 1. 简易版
+// 此版本为简易版深度克隆，针对循环嵌套，函数以及map或者set对象在克隆时会出现错误
