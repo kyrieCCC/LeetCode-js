@@ -29,7 +29,11 @@ const reverseWords_ans = (s) => {
     reverse(0, s.length - 1);
     return s.join(' ');
 }
- 
+// 改进后的方法
+// 相当于自己重写reverse反转的方法
+// 其余的地方与第一个方法类似 
+
+
 const s1 = "the sky is blue";
 const s2 = "  hello world!  ";
 const s3 = "a good   example";
