@@ -29,7 +29,7 @@ console.log(obj2)
 //2. MessageChannel
 //我们使用一个叫做“信息隧道”的方法也可以完成深度克隆
 const deepCloneMsg = (obj) => {
-    return Promise((resolve) => {
+    return new Promise((resolve) => {
         const { port1, port2 } = new MessageChannel()
         port1.postMessage(obj)
         port2.onmessage = (msg) => {
