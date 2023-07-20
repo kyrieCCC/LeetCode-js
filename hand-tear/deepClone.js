@@ -51,3 +51,18 @@ deepCloneMsg(obj).then(item => console.log(obj))
 // 手动递归实现深度克隆
 // 1. 简易版
 // 此版本为简易版深度克隆，针对循环嵌套，函数以及map或者set对象在克隆时会出现错误
+const deepClone_easy = (target) => {
+    if (typeof target !== 'object' || !target) {
+        return null;
+    }
+    const res = {};
+    for (const key in target) {
+        const item = target[key]
+        if (typeof item == "function" && item) {
+            res[key] = deepClone_easy(item);
+        } else {
+            res[key] = item;
+        }
+    }
+    return res
+}
