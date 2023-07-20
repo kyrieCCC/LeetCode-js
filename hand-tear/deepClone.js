@@ -66,3 +66,16 @@ const deepClone_easy = (target) => {
     }
     return res
 }
+
+const target = {
+    name: 'wlc',
+    age: 18,
+    stack: {
+        lang: 'js',
+        frame: 'react',
+        bg: 'hotel'
+    }
+}
+
+const res = deepClone_easy(target)
+console.log(res);
