@@ -14,6 +14,9 @@
 var reverseWords = function (s) {
     return s.trim().split(/\s+/).reverse().join(' ');
 }
+// 利用语法特性，首先去除两边的空格符
+// 使用正则表达式匹配出非空格字符，在进行反转
+// 将不同单词间添加空格最后输出即可
  
 const s1 = "the sky is blue";
 const s2 = "  hello world!  ";
