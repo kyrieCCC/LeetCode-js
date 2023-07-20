@@ -12,9 +12,12 @@
  * @return {string}
  */
 var reverseWords = function (s) {
-
+    return s.trim().split(/\s+/).reverse().join(' ');
 }
  
 const s1 = "the sky is blue";
 const s2 = "  hello world!  ";
 const s3 = "a good   example";
+console.log(reverseWords(s1));
+console.log(reverseWords(s2));
+console.log(reverseWords(s3));
