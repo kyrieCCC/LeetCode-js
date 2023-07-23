@@ -41,3 +41,6 @@ var firstUniqChar_my = function(s) {
     }
     return ' '
 };
+// 复杂度稍微高一点的解法
+// 引入了哈希表，用于计算出现只有一次的单词
+// 最后拿到它的位置即可
