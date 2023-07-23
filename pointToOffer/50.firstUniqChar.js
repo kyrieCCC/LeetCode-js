@@ -23,3 +23,21 @@ var firstUniqChar = function (s) {
 // 最快的方法
 // 如果单词出现的次数为一个，计算出现的位置
 // 判断最前面出现的单词即可
+
+
+var firstUniqChar_my = function(s) {
+    if(s.length == 0){
+        return ' '
+    }
+    const map = new Map();
+    const arr = s.split('')
+    for(let i = 0; i < s.length; i++){
+        map.get(arr[i]) == undefined ? map.set(arr[i], 1) : map.set(arr[i], map.get(arr[i]) + 1)
+    }
+    for(let i = 0; i < s.length; i++){
+        if(map.get(arr[i]) == 1) {
+            return String(arr[i])
+        }
+    }
+    return ' '
+};
