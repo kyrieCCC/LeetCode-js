@@ -20,3 +20,6 @@ var firstUniqChar = function (s) {
     }
     return pos = pos == -1 ? ' ' : s.charAt(pos)
 }
+// 最快的方法
+// 如果单词出现的次数为一个，计算出现的位置
+// 判断最前面出现的单词即可
