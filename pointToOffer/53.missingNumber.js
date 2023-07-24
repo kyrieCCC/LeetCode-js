@@ -44,6 +44,9 @@ const missingNumber_ans = (nums) => {
     }
     return missing;
 }
+// 哈希集合
+// 记录每一个出现过的元素
+// 再来遍历元素找出缺失的值
 
 const nums1 = [0, 1, 3]
 const nums2 = [0, 1, 2, 3, 4, 5, 6, 7, 9]
