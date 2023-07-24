@@ -11,5 +11,22 @@
  * @return {number}
  */
 var missingNumber = function (nums) { 
-    
+    if(nums.length == 1 && nums[0] == 0){
+        return nums[0] + 1
+    }
+    if(nums.length == 1 && nums[0] != 0) {
+        return 0
+    }
+    let i = 0
+    while(i <= nums.length) {
+        if(i != nums[i]){
+            return i
+        }
+        i++
+    }
 }
+
+const nums1 = [0, 1, 3]
+const nums2 = [0, 1, 2, 3, 4, 5, 6, 7, 9]
+console.log(missingNumber(nums1));
+console.log(missingNumber(nums2));
