@@ -29,6 +29,22 @@ var missingNumber = function (nums) {
 // 循环找出缺失的数字
 // 返回index值
 
+const missingNumber_ans = (nums) => {
+    const set = new Set();
+    const n = nums.length + 1;
+    for (let i = 0; i < n - 1; i++) {
+        set.add(nums[i]);
+    }
+    let missing = -1;
+    for (let i = 0; i <= n - 1; i++) {
+        if (!set.has(i)) {
+            missing = i;
+            break;
+        }
+    }
+    return missing;
+}
+
 const nums1 = [0, 1, 3]
 const nums2 = [0, 1, 2, 3, 4, 5, 6, 7, 9]
 console.log(missingNumber(nums1));
