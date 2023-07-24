@@ -25,6 +25,9 @@ var missingNumber = function (nums) {
         i++
     }
 }
+// 正常解法
+// 循环找出缺失的数字
+// 返回index值
 
 const nums1 = [0, 1, 3]
 const nums2 = [0, 1, 2, 3, 4, 5, 6, 7, 9]
