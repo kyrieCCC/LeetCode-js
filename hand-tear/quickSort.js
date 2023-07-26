@@ -15,4 +15,6 @@ const quickSort = function (arr) {
 }
 //快速排序的思路就是分为左右两边进行递归
 const result = quickSort(arr)
+const arr2 = [3, 2, 1]
+console.log(quickSort(arr2));
 console.log(result)

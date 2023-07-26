@@ -6,12 +6,39 @@
 // 输入：arr = [0,1,2,1], k = 1
 // 输出：[0]
 
-
 /**
  * @param {number[]} arr
  * @param {number} k
  * @return {number[]}
  */
-var getLeastNumbers = function (arr, k) { 
+var getLeastNumbers = function (arr, k) {
+  return arr.sort((a, b) => a - b).slice(0, k);
+};
 
+const getLeastNumbers_ans = (arr, k) => {
+    return quicklySort(arr)
 }
+
+const quicklySort = (arr) => {
+    if (arr.length <= 1) {
+        return arr;
+    }
+    const midIndex = Math.floor(arr.length / 2);
+    const midItem = arr.splice(midIndex, 1)[0];
+    const left = [], right = [];
+    for (let i = 0; i < arr.length; i++){
+        const item = arr[i]
+        item < midIndex ? left.push(item) : right.push(item)
+    }
+    return quicklySort(left).concat(midItem, ...quicklySort(right))
+}
+
+const arr1 = [3, 2, 1],
+  k1 = 2;
+const arr2 = [0, 1, 2, 1],
+  k2 = 1;
+console.log(getLeastNumbers(arr1, k1));
+console.log(getLeastNumbers(arr2, k2));
+console.log('-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=');
+console.log(getLeastNumbers_ans(arr1, k1));
+console.log(getLeastNumbers_ans(arr2, k2));
