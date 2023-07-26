@@ -20,6 +20,7 @@ var getLeastNumbers = function (arr, k) {
 const getLeastNumbers_ans = (arr, k) => {
     return quicklySort(arr).slice(0, k)
 }
+// 使用快速排序替代sort方法
 
 const quicklySort = (arr) => {
     if (arr.length <= 1) {
