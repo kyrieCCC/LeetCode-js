@@ -14,9 +14,11 @@
 var getLeastNumbers = function (arr, k) {
   return arr.sort((a, b) => a - b).slice(0, k);
 };
+// 数组内置方法
+// 直接进行排序并取出其中的前k个值即可
 
 const getLeastNumbers_ans = (arr, k) => {
-    return quicklySort(arr)
+    return quicklySort(arr).slice(0, k)
 }
 
 const quicklySort = (arr) => {
@@ -28,9 +30,9 @@ const quicklySort = (arr) => {
     const left = [], right = [];
     for (let i = 0; i < arr.length; i++){
         const item = arr[i]
-        item < midIndex ? left.push(item) : right.push(item)
+        item < midItem ? left.push(item) : right.push(item)
     }
-    return quicklySort(left).concat(midItem, ...quicklySort(right))
+    return quicklySort(left).concat(midItem, quicklySort(right))
 }
 
 const arr1 = [3, 2, 1],
