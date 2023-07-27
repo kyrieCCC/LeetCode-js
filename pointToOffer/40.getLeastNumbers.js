@@ -40,6 +40,7 @@ const arr1 = [3, 2, 1],
   k1 = 2;
 const arr2 = [0, 1, 2, 1],
   k2 = 1;
+  
 console.log(getLeastNumbers(arr1, k1));
 console.log(getLeastNumbers(arr2, k2));
 console.log('-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=');
