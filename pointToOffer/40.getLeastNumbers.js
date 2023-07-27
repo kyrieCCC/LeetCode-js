@@ -31,7 +31,7 @@ const quicklySort = (arr) => {
     const left = [], right = [];
     for (let i = 0; i < arr.length; i++){
         const item = arr[i]
-        item < midItem ? left.push(item) : right.push(item)
+      item < midItem ? left.push(item) : right.push(item);
     }
     return quicklySort(left).concat(midItem, quicklySort(right))
 }
@@ -40,7 +40,7 @@ const arr1 = [3, 2, 1],
   k1 = 2;
 const arr2 = [0, 1, 2, 1],
   k2 = 1;
-  
+
 console.log(getLeastNumbers(arr1, k1));
 console.log(getLeastNumbers(arr2, k2));
 console.log('-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=');
