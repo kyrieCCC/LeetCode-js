@@ -11,5 +11,20 @@
  * @return {number[]}
  */
 var intersect = function (nums1, nums2) { 
-    
+    nums1.sort((a, b) => a - b);
+    nums2.sort((a, b) => a - b);
+    let l = 0, r = 0, ans = [];
+    while (l < nums1.length && r < nums2.length) {
+        if (nums1[l] === nums2[r]) {
+            ans.push(nums1[l]);
+            l++;
+            r++;
+        } else nums1[l] < nums2[r] ? l++ : r++;
+    }
+    return ans;
 }
+
+const nums1 = [1, 2, 2, 1], nums2 = [2, 2];
+const nums11 = [4,9,5], nums21 = [9,4,9,8,4]
+console.log(intersect(nums1, nums2));
+console.log(intersect(nums11, nums21));
