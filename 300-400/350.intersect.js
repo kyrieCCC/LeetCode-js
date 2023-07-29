@@ -23,6 +23,9 @@ var intersect = function (nums1, nums2) {
     }
     return ans;
 }
+// 官方答案
+// 首先将数组排序，再使用双指针
+// 如果相同元素就推入答案数组，反之让指针移动
 
 const nums1 = [1, 2, 2, 1], nums2 = [2, 2];
 const nums11 = [4,9,5], nums21 = [9,4,9,8,4]
