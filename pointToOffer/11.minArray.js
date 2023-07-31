@@ -45,6 +45,10 @@ const minArray_ans = (numbers) => {
     return numbers[left]
 }
 
+// 官方答案
+// 二分查找的思想，每次都会取出中间值进行比对
+// 如果偏大或者偏小就会移动指针
+
 const numbers1 = [3, 4, 5, 1, 2];
 const numbers2 = [2, 2, 2, 0, 1];
 console.log(minArray(numbers1));
