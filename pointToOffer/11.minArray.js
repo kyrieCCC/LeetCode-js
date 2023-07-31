@@ -26,6 +26,9 @@ const minArray_plus = (numbers) => {
     }
     return numbers[0]
 }
+// 遍历数组，当遇到前一位大于后一位的时候
+// 说明此处位旋转后的节点
+// 返回该节点即可
 
 const numbers1 = [3, 4, 5, 1, 2];
 const numbers2 = [2, 2, 2, 0, 1];
