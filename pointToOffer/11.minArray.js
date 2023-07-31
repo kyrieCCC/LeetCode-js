@@ -18,8 +18,19 @@ var minArray = function(numbers) {
 // 使用数组的api方法进行计算
 // 首先将数组进行排序，随后取出排序后的最小值即可
 
+const minArray_plus = (numbers) => {
+    for (let i = 0; i < numbers - 1; i++) {
+        if (numbers[i] > numbers[i + 1]) {
+            return numbers[i + 1]
+        }
+    }
+    return numbers[0]
+}
 
 const numbers1 = [3, 4, 5, 1, 2];
 const numbers2 = [2, 2, 2, 0, 1];
 console.log(minArray(numbers1));
 console.log(minArray(numbers2));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=');
+console.log(minArray_plus(numbers1));
+console.log(minArray_plus(numbers2));
