@@ -30,6 +30,21 @@ const minArray_plus = (numbers) => {
 // 说明此处位旋转后的节点
 // 返回该节点即可
 
+const minArray_ans = (numbers) => {
+    let left = 0, right = numbers.length - 1;
+    while (left < right) {
+        const midIndex = left + Math.floor((right - left) / 2);
+        if (numbers[midIndex] < numbers[right]) {
+            right = midIndex
+        } else if (numbers[midIndex] > numbers[right]) {
+            left = midIndex + 1
+        } else {
+            right--
+        }
+    }
+    return numbers[left]
+}
+
 const numbers1 = [3, 4, 5, 1, 2];
 const numbers2 = [2, 2, 2, 0, 1];
 console.log(minArray(numbers1));
@@ -37,3 +52,6 @@ console.log(minArray(numbers2));
 console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=');
 console.log(minArray_plus(numbers1));
 console.log(minArray_plus(numbers2));
+console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=');
+console.log(minArray_ans(numbers1));
+console.log(minArray_ans(numbers2));
