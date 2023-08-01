@@ -27,9 +27,22 @@ var firstUniqChar = function (s) {
 // 首先针对字符串中的元素就行遍历，使用map进行计数
 // 再进行循环找到第一次出现的val为1的元素并返回其索引
 
+const firstUniqChar_plus = (s) => {
+    for (let i = 0; i < s.length; i++){
+        if (s.indexOf(s[i]) == s.lastIndexOf(s[i])) {
+            return i
+        }
+    }
+    return -1
+}
+
 const s1 = "leetcode";
 const s2 = "loveleetcode";
 const s3 = "aabb";
 console.log(firstUniqChar(s1));
 console.log(firstUniqChar(s2));
 console.log(firstUniqChar(s3));
+console.log('-=-=-=-=-=-=-=-=-=-=--=-=-==-=-=-=-=-=-=-=');
+console.log(firstUniqChar_plus(s1));
+console.log(firstUniqChar_plus(s2));
+console.log(firstUniqChar_plus(s3));
