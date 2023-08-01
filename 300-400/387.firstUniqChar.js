@@ -35,6 +35,9 @@ const firstUniqChar_plus = (s) => {
     }
     return -1
 }
+// 使用到string的api
+// 遍历元素利用api判断元素是否只出现一次
+// 如果符合条件就直接返回索引
 
 const s1 = "leetcode";
 const s2 = "loveleetcode";
