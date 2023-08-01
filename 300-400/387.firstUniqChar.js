@@ -23,6 +23,9 @@ var firstUniqChar = function (s) {
   }
   return -1;
 };
+// 遇到计数问题直接掏出祖传已久的map
+// 首先针对字符串中的元素就行遍历，使用map进行计数
+// 再进行循环找到第一次出现的val为1的元素并返回其索引
 
 const s1 = "leetcode";
 const s2 = "loveleetcode";
