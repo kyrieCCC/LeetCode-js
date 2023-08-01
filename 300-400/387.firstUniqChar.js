@@ -39,6 +39,15 @@ const firstUniqChar_plus = (s) => {
 // 遍历元素利用api判断元素是否只出现一次
 // 如果符合条件就直接返回索引
 
+const firstUniqChar_ans = (s) => {
+    let i=96,min=Infinity
+    while(++i<97+26){
+        let a=String.fromCharCode(i),j=s.indexOf(a)
+        if(j>-1&&j===s.lastIndexOf(a)&&j<min) min=j
+    }
+    return min=== Infinity?-1:min
+}
+
 const s1 = "leetcode";
 const s2 = "loveleetcode";
 const s3 = "aabb";
