@@ -12,7 +12,11 @@
  * @return {number}
  */
 var lastRemaining = function (n, m) { 
-
+    let ans = 0;
+    for (let i = 1; i <= n; i++){
+        ans = (ans + m) % i
+    }
+    return ans
 }
 const n = 5, m = 3
 console.log(lastRemaining(n, m));
