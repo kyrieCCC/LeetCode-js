@@ -18,5 +18,9 @@ var lastRemaining = function (n, m) {
     }
     return ans
 }
+// 反推法
+// 从第一个数开始往前推
+// 直到i满足元素的个数
+// 代表此时位置上的元素即为最后一个出现的
 const n = 5, m = 3
 console.log(lastRemaining(n, m));
