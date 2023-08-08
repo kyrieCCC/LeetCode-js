@@ -40,3 +40,5 @@ var maxDepth = function(root) {
     }
     return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
 };
+// 深度优先遍历
+// 每次都找出最深的一层进行比较
