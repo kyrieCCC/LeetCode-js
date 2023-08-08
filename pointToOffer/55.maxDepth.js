@@ -31,4 +31,5 @@ var maxDepth = function (root) {
   }
   return res;
 };
-
+// 广度优先遍历
+// 每次都将同一层的节点遍历完后再到下一层
