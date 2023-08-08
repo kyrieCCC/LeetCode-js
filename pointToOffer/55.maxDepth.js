@@ -33,3 +33,10 @@ var maxDepth = function (root) {
 };
 // 广度优先遍历
 // 每次都将同一层的节点遍历完后再到下一层
+
+var maxDepth = function(root) {
+    if(!root){
+        return 0
+    }
+    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
+};
