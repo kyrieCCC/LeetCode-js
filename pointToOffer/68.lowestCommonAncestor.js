@@ -35,3 +35,5 @@ var lowestCommonAncestor = function (root, p, q) {
     dfs(root, p, q);
     return res
 }
+// 时间复杂度：O(N)，其中N是二叉树的节点数。二叉树的所有节点有且只会被访问一次，因此时间复杂度为O(N)。
+// 空间复杂度：O(N) ，其中N是二叉树的节点数。递归调用的栈深度取决于二叉树的高度，二叉树最坏情况下为一条链，此时高度为N，因此空间复杂度为O(N)。
