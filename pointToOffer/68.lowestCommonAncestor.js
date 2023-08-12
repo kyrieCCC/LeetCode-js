@@ -53,3 +53,5 @@ const lowestCommonAncestor = (root, p, q) => {
     }
     return left == null ? right : left
 }
+// 递归的写法
+// 层层递归
