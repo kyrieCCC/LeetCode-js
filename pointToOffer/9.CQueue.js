@@ -35,5 +35,8 @@ CQueue.prototype.in2out = function () {
     this.outStack.push(this.stack.pop());
   }
 };
+// 将一个栈当作输入栈，用于压入 appendTail 传入的数据；
+// 另一个栈当作输出栈，用于 deleteHead 操作。
+
 
 const newStack = new CQueue()
