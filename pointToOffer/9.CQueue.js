@@ -6,7 +6,32 @@
 // [[],[3],[],[],[]]
 // 输出：[null,null,3,-1,-1]
 
-var CQueue = function() {
-    this.stack = [];
-    this.outStack = [];
-}
+var CQueue = function () {
+  this.stack = [];
+  this.outStack = [];
+};
+/**
+ * @param {number} value
+ * @return {void}
+ */
+CQueue.prototype.appendTail = function (value) {
+  this.stack.push(value);
+};
+
+/**
+ * @return {number}
+ */
+CQueue.prototype.deleteHead = function () {
+  if (!this.outStack.length) {
+    if (!this.stack.length) {
+      return -1;
+    }
+    this.in2out();
+  }
+  return this.outStack.pop();
+};
+CQueue.prototype.in2out = function () {
+  while (this.stack.length) {
+    this.outStack.push(this.stack.pop());
+  }
+};
