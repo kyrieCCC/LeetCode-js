@@ -35,3 +35,5 @@ CQueue.prototype.in2out = function () {
     this.outStack.push(this.stack.pop());
   }
 };
+
+const newStack = new CQueue()
